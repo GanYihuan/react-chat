@@ -1,6 +1,10 @@
-import React from 'react'
+import React, {Component} from 'react';
+import {Button, List} from 'antd-mobile';
+// package.json!
+// Load on Demand antd-mobile
+// import 'antd-mobile/dist/antd-mobile.css';
 
-class App extends React.Component {
+class App extends Component {
   render() {
     let boss = '李云龙s'
     return (
@@ -13,13 +17,14 @@ class App extends React.Component {
   }
 }
 
-class Yiying extends React.Component {
+class Yiying extends Component {
   constructor(props) {
     super(props)
     this.state = {
       soldiers: ['虎子', '柱子', '王根生']
     }
-    this.addSoldier = this.addSoldier.bind(this)
+    // this bind
+    // this.addSoldier = this.addSoldier.bind(this)
     console.log('组件初始化')
   }
 
@@ -52,7 +57,6 @@ class Yiying extends React.Component {
     console.log("组件卸载了");
   }
 
-
   addSoldier() {
     this.setState({
       soldiers: [...this.state.soldiers, '新兵蛋子' + Math.random()]
@@ -63,10 +67,23 @@ class Yiying extends React.Component {
     return (
         <div>
           <h2>Yiying营长，{this.props.boss}</h2>
-          <button onClick={this.addSoldier}>新兵入伍</button>
-          <ul>
-            {this.state.soldiers.map(v => <li key={v}>{v}</li>)}
-          </ul>
+          {/*<button onClick={this.addSoldier}>新兵入伍</button>*/}
+          {/* bind(this) */}
+          <Button type={'primary'} onClick={() => this.addSoldier()}>新兵入伍</Button>
+          {/*<ul>*/}
+            {/*{this.state.soldiers.map(v => <li key={v}>{v}</li>)}*/}
+          {/*</ul>*/}
+          <List renderHeader={() => "Soldier lists"}>
+            {
+              this.state.soldiers.map(v => {
+                return (
+                    <List.Item key={v}>
+                      {v}
+                    </List.Item>
+                )
+              })
+            }
+          </List>
         </div>
     )
   }
