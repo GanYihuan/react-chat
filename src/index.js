@@ -12,7 +12,7 @@ function counter(state = 0, action) {
       return 10;
   }
 }
-// 新建store
+// 新建store.
 const store = createStore(counter);
 const init = store.getState();
 console.log(init);
