@@ -12,19 +12,24 @@ function counter(state = 0, action) {
       return 10;
   }
 }
+
 // 新建store
 const store = createStore(counter);
+// 获取状态
 const init = store.getState();
 console.log(init);
 
 function listener() {
+  // 获取状态
   const current = store.getState();
   // Note that the symbol above the TAB key is
   console.log(`有${current}`);
 }
 
+// 监听
 store.subscribe(listener);
 // 派发事件，传递action
+// 处理事件
 store.dispatch({type: 'add'});
 store.dispatch({type: 'add'});
 store.dispatch({type: 'decrease'});
