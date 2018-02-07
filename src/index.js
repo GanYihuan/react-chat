@@ -24,7 +24,7 @@ function listener() {
 }
 
 store.subscribe(listener);
-// 派发事件，传递action
+// 派发事件，传递action.
 store.dispatch({type: 'add'});
 store.dispatch({type: 'add'});
 store.dispatch({type: 'decrease'});
