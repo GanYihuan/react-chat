@@ -5,7 +5,8 @@ import App from './App';
 // compose: function Combination
 import {createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
-import {counter, addGun, removeGun, addGunAsync} from './index.redux';
+import {Provider} from 'react-redux';
+import {counter} from './index.redux';
 
 // Data safe
 const store = createStore(counter, compose(
@@ -13,18 +14,11 @@ const store = createStore(counter, compose(
     window.devlToolsExtension ? window.devlToolsExtension() : f => f
 ));
 
-function render() {
-  ReactDom.render(
-      <App
-          store={store}
-          addGun={addGun}
-          removeGun={removeGun}
-          addGunAsync={addGunAsync}
-      />,
-      document.getElementById('root')
-  )
-}
+ReactDom.render(
+    <Provider store={store}>
+      <App/>
+    </Provider>
+    ,
+    document.getElementById('root')
+)
 
-render();
-// Subscriptions, data changes will be implemented anew
-store.subscribe(render);
