@@ -5,7 +5,7 @@ import {createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import {counter, addGun, removeGun, addGunAsync} from './index.redux';
 
-// Data safe
+// Data safe.
 const store = createStore(counter, applyMiddleware(thunk));
 
 function render() {
