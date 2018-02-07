@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import App from './App';
-import {createStore, applyMiddleware} from 'redux';
+// applyMiddleware: async
+// compose: function Combination
+import {createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
 import {counter, addGun, removeGun, addGunAsync} from './index.redux';
 
 // Data safe
-const store = createStore(counter, applyMiddleware(thunk));
+const store = createStore(counter, compose(
+    applyMiddleware(thunk),
+    window.devlToolsExtension ? window.devlToolsExtension() : f => f
+));
 
 function render() {
   ReactDom.render(
