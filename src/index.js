@@ -26,5 +26,5 @@ function render() {
 }
 
 render();
-// Subscriptions, data changes will be implemented anew.
+// Subscriptions, data changes will be implemented anew
 store.subscribe(render);
