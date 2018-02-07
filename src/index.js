@@ -1,4 +1,8 @@
+import React from 'react';
+import ReactDom from 'react-dom';
+import App from './App';
 import {createStore} from 'redux';
+import {counter, addGun, removeGun} from './index.redux';
 
 // reducer.
 // Generate new state based on Old State and action
@@ -12,15 +16,14 @@ function counter(state = 0, action) {
       return 10;
   }
 }
-// 新建store.
+// Data safe
 const store = createStore(counter);
-const init = store.getState();
-console.log(init);
 
-function listener() {
-  const current = store.getState();
-  // Note that the symbol above the TAB key is
-  console.log(`有${current}`);
+function render() {
+  ReactDom.render(
+      <App store={store} addGun={addGun} removeGun={removeGun}/>,
+      document.getElementById('root')
+  )
 }
 
 store.subscribe(listener);
@@ -28,3 +31,6 @@ store.subscribe(listener);
 store.dispatch({type: 'add'});
 store.dispatch({type: 'add'});
 store.dispatch({type: 'decrease'});
+render();
+// Subscriptions, data changes will be implemented anew
+store.subscribe(render);
