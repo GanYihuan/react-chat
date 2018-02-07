@@ -4,7 +4,7 @@ import App from './App';
 import {createStore} from 'redux';
 import {counter, addGun, removeGun} from './index.redux';
 
-// reducer.
+// reducer
 // Generate new state based on Old State and action
 function counter(state = 0, action) {
   switch (action.type) {
