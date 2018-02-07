@@ -33,7 +33,7 @@ const store = createStore(reducers, compose(
 // }
 
 // 登录
-// 	没有登录信息 统一跳转login
+// 	没有登录信息 统一跳转login.
 // 页面  导航+显示+注销
 // 	一营
 // 	二营
