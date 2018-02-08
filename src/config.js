@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import axios from 'axios'
 import {Toast} from 'antd-mobile'
 
@@ -14,4 +12,3 @@ axios.interceptors.response.use(function (config) {
   Toast.hide()
   return config
 })
->>>>>>> login-page

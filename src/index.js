@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react'
 import ReactDom from 'react-dom'
 import {createStore, applyMiddleware, compose} from 'redux'
@@ -36,4 +34,3 @@ ReactDom.render(
     </Provider>),
     document.getElementById('root')
 )
->>>>>>> login-page
