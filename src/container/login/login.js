@@ -33,10 +33,20 @@ class Login extends React.Component {
           <Logo/>
           <WingBlank>
             <List>
-              {this.props.msg ? <p className='error-msg'>{this.props.msg}</p> : null}
-              <InputItem onChange={v => this.handleChange('user', v)}>用户</InputItem>
+              {
+                this.props.msg
+                    ?
+                    <p className='error-msg'>{this.props.msg}</p>
+                    :
+                    null
+              }
+              <InputItem
+                  onChange={v => this.handleChange('user', v)}
+              >用户</InputItem>
               <WhiteSpace/>
-              <InputItem onChange={v => this.handleChange('pwd', v)}>密码</InputItem>
+              <InputItem
+                  onChange={v => this.handleChange('pwd', v)}
+              >密码</InputItem>
             </List>
             <WhiteSpace/>
             <Button onClick={this.handleLogin} type='primary'>登录</Button>

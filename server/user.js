@@ -1,11 +1,15 @@
 const express = require('express')
 const Router = express.Router()
+// Encryption, protect http://localhost:9093/user/list
 const utils = require('utility')
 const model = require('./model')
 const User = model.getModel('user')
 const _filter = {'pwd': 0, '__v': 0}
 
+// all register info
+// http://localhost:9093/user/list
 Router.get('/list', function (req, res) {
+  // toggle this code, the info will reset
   // User.remove({},function(e,d){})
   User.find({}, function (err, doc) {
     return res.json(doc)
@@ -57,6 +61,7 @@ Router.get('/info', function (req, res) {
   // 用户有没有cookie
 })
 
+// add salt, Encryption, protect http://localhost:9093/user/list
 function md5Pwd(pwd) {
   const salt = 'imooc_is_good_3957x8yza6!@#IUHJh~~'
   return utils.md5(utils.md5(pwd + salt))
