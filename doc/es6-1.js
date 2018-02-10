@@ -33,3 +33,62 @@ console.log(Object.values(object));
 console.log(Object.entries(object));
 
 
+const name2 = 'imooc';
+const obj = {
+  name2: 'hello'
+}
+obj[name2] = 'hello world';
+console.log(obj);
+
+
+const name3 = 'imooc';
+const obj2 = {
+  [name3]: 'hello'
+}
+console.log(obj2);
+
+
+const name4 = 'imooc';
+const obj3 = {
+  name,
+  [name]: 'hello',
+  hello: function () {
+
+  },
+  hello1() {
+
+  }
+}
+console.log(obj3);
+
+
+const obj4 = {name: 'imooc', course: 'react'};
+const obj5 = {type: 'it', name: 'woniu'};
+console.log({...obj4, ...obj5, date: '2017'});
+
+
+const arr2 = ['hello', 'imooc'];
+let [arg1, arg2] = arr2;
+console.log(arg1, '|', arg2);
+
+
+const obj6 = {name5: 'imooc5', course5: 'reac5'};
+const {name5, course5} = obj6;
+console.log(name5, '|', course5);
+
+
+class MyApp {
+  constructor() {
+    this.name = 'imooc6'
+  }
+  sayHello() {
+    console.log(`hello ${this.name}`)
+  }
+}
+const app = new MyApp();
+app.sayHello();
+
+
+
+
+

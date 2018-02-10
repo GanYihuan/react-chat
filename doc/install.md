@@ -17,6 +17,52 @@ npm install redux --save
 npm run eject
 
 
+## 
+npm install express --save
+
+
+## Unlimited Refresh
+npm install -g nodemon
+## run
+nodemon server.js
+
+
+## UI
+npm install antd-mobile@next --save
+
+
+##
+npm install babel-plugin-import --save
+
+
+## 
+npm install redux --save
+
+
+##
+npm install redux-thunk --save
+
+
+##
+npm install react-redux --save
+
+
+##
+npm install babel-plugin-transform-decorators-legacy --save-dev
+
+
+##
+npm install react-router-dom --save
+
+
+##
+npm install axios --save
+
+
+##
+npm install cookie-parser --save
+
+
 ## 类型检测,1.6删除了,要install
 npm install prop-types --save
 ```
