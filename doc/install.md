@@ -17,14 +17,24 @@ npm install redux --save
 npm run eject
 
 
-## 
+## 2-3
 npm install express --save
 
 
 ## Unlimited Refresh
 npm install -g nodemon
-## run
+## run, into server.js path
 nodemon server.js
+ 
+
+## 2-4
+brew install mongodb
+## 
+npm install mongoose --save
+## run mongo
+sudo mongod
+## another iterm tab
+mongo
 
 
 ## UI
