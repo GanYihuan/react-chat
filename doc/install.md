@@ -35,6 +35,10 @@ npm install mongoose --save
 sudo mongod
 ## another iterm tab
 mongo
+## run, into server.js path
+nodemon server.js
+## projectName path
+npm start
 
 
 ## UI

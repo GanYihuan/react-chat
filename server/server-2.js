@@ -1,18 +1,24 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const DB_URL = 'mongodb://localhost:27017/imooc-chat'
+
+// 连接 mongo, use imooc set
+const DB_URL = 'mongodb://localhost:27017/imooc'
 mongoose.connect(DB_URL)
 mongoose.connection.on('connected', function () {
+  // if connect success
   console.log('mongo connect server')
 })
+
+// 定义文档模型
 const User = mongoose.model('user', new mongoose.Schema({
   user: {type: String, require: true},
   age: {type: String, require: true}
 }))
-// add data
+
+// 新增数据
 User.create({
-  name: 'xiaoming',
-  age: 18
+  name: 'xiaohua',
+  age: 14
 }, function (err, doc) {
   if (!err) {
     console.log(doc)
@@ -20,15 +26,18 @@ User.create({
     console.log(err)
   }
 })
-// remove data
+
+// 删除数据
 // User.remove({age: 18}, function (err, doc) {
 //   console.log(doc)
 // })
-//
+
+// 更新数据
 User.update({'name': 'xiaoming'}, {'$set': {age: 30}}, function (err, doc) {
   console.log(doc)
 })
 
+// create app
 const app = express()
 
 app.get('/', function (req, res) {
