@@ -41,12 +41,28 @@ nodemon server.js
 npm start
 
 
-## UI
+## 3-7: 
+npm install antd-mobile --save
+## install latest
 npm install antd-mobile@next --save
-
-
-##
+## 
 npm install babel-plugin-import --save
+## package.json, config like this, can delete .css file
+"babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      [
+        "import",
+        {
+          "libraryName": "antd-mobile",
+          "style": "css"
+        }
+      ],
+      "transform-decorators-legacy"
+    ]
+  },
 
 
 ## 

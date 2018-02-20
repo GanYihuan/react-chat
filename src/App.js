@@ -1,4 +1,5 @@
 import React from 'react'
+import {Button, List} from 'antd-mobile'
 
 class App extends React.Component {
   render() {
@@ -6,16 +7,17 @@ class App extends React.Component {
     return (
         <div>
           <h2>独立团，团长{boss}</h2>
-          <yiying 老大='张大喵'></yiying>
-          <qibinglian 老大='孙德胜'></qibinglian>
+          <Yiying boss='张大喵'></Yiying>
+          <Qibinglian boss='孙德胜'></Qibinglian>
         </div>
     )
   }
 }
 
-class yiying extends React.Component {
+class Yiying extends React.Component {
   constructor(props) {
     super(props)
+    // Immutable objects, this.state gets
     this.state = {
       soldiers: ['虎子', '柱子', '王根生']
     }
@@ -52,27 +54,39 @@ class yiying extends React.Component {
     console.log("组件卸载了");
   }
 
+  // Arrow function to resolve this problem
   addSoldier() {
     this.setState({
+      // ...this.state.soldiers: expand
       soldiers: [...this.state.soldiers, '新兵蛋子' + Math.random()]
     })
   }
 
   render() {
+    // Item, List: antd-mobile component
+    const Item = List.Item
     return (
         <div>
-          <h2>yiying营长，{this.props.老大}</h2>
-          <button onClick={this.addSoldier}>新兵入伍</button>
-          <ul>
-            {this.state.soldiers.map(v => <li key={v}>{v}</li>)}
-          </ul>
+          <h2>yiying营长，{this.props.boss}</h2>
+          {/* Arrow function to resolve this problem */}
+          {/* Button: antd-mobile component */}
+          <Button
+              type={'primary'}
+              onClick={this.addSoldier}
+          >新兵入伍</Button>
+          <List
+              renderHeader={() => 'soldier list'}
+              className='my-list'
+          >
+            {this.state.soldiers.map(v => <Item key={v}>{v}</Item>)}
+          </List>
         </div>
     )
   }
 }
 
-function qibinglian(props) {
-  return <h2>qibinglian连长{props.老大},冲啊！</h2>
+function Qibinglian(props) {
+  return <h2>qibinglian连长: {props.boss},冲啊！</h2>
 }
 
 export default App;
