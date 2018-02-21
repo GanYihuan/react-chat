@@ -15,7 +15,7 @@ import {
   Switch,
   Link
 } from 'react-router-dom'
-// Merges all reducer and returns.
+// Merges all reducer and returns
 import reducers from './reducer'
 // component
 import App from './App' // 4-8, 4-9
