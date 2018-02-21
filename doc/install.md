@@ -65,15 +65,15 @@ npm install babel-plugin-import --save
   },
 
 
-## 
+## redux
 npm install redux --save
 
 
-##
+## redux handle async
 npm install redux-thunk --save
 
 
-##
+## connect react and redux
 npm install react-redux --save
 
 
