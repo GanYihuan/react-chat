@@ -9,7 +9,7 @@ import {addGun, removeGun, addGunAsync} from './redux-2'
     // state put into props
     state => ({num: state}),
     // actionCreators
-    // addGun(), removeGun(), addGunAsync() put into props
+    // addGun(), removeGun(), addGunAsync() put into props, auto dispatch
     {addGun, removeGun, addGunAsync}
 )
 class App extends React.Component {
@@ -27,12 +27,12 @@ class App extends React.Component {
   }
 }
 
-// @connect replace it
-//  // state put into props
+// // @connect replace it
+// // state put into props
 // const mapStatetoProps = (state) => {
 //   return {num: state}
 // }
-//  // addGun, removeGun, addGunAsync put into props
+// // addGun, removeGun, addGunAsync put into props
 // const actionCreators = {addGun, removeGun, addGunAsync}
 // App = connect(mapStatetoProps, actionCreators)(App)
 

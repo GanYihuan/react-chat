@@ -19,10 +19,12 @@ export function addGun() {
   return {type: ADD_GUN}
 }
 
+// action creator, equal store.dispatch
 export function removeGun() {
   return {type: REMOVE_GUN}
 }
 
+// action creator, equal store.dispatch
 // async
 export function addGunAsync() {
   // thunk The role of Plug-ins, where you can return functions,
