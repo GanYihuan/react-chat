@@ -8,7 +8,7 @@ import {createStore, applyMiddleware, compose} from 'redux'
 // pass store, connect react and redux
 import {Provider} from 'react-redux'
 // reducer
-import {counter} from './index.redux'
+import {counter} from './redux-2'
 import App from './App-2'
 
 const store = createStore(counter, compose(

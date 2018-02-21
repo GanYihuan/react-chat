@@ -1,7 +1,7 @@
 import React from 'react'
 // To obtain parameters from an external component
 import {connect} from 'react-redux'
-import {addGun, removeGun, addGunAsync} from './index.redux'
+import {addGun, removeGun, addGunAsync} from './redux-2'
 
 // Adorner mode
 @connect(
@@ -19,9 +19,9 @@ class App extends React.Component {
     return (
         <div>
           <h2>There's a machine gun. {this.props.num}</h2>
-          <button onClick={this.props.addGun}>Apply for a weapon</button>
-          <button onClick={this.props.removeGun}>Handing over weapons</button>
-          <button onClick={this.props.addGunAsync}>Two days delayed to give</button>
+          <button onClick={this.props.addGun}>申请武器</button>
+          <button onClick={this.props.removeGun}>上交武器</button>
+          <button onClick={this.props.addGunAsync}>延迟给</button>
         </div>
     )
   }
@@ -32,7 +32,7 @@ class App extends React.Component {
 // const mapStatetoProps = (state) => {
 //   return {num: state}
 // }
-//  //addGun, removeGun, addGunAsync put into props
+//  // addGun, removeGun, addGunAsync put into props
 // const actionCreators = {addGun, removeGun, addGunAsync}
 // App = connect(mapStatetoProps, actionCreators)(App)
 

@@ -59,26 +59,24 @@ npm install babel-plugin-import --save
           "libraryName": "antd-mobile",
           "style": "css"
         }
-      ],
-      "transform-decorators-legacy"
+      ]
     ]
   },
 
 
-## redux
-npm install redux --save
-
-
-## redux handle async
+## 4-6: redux handle async
 npm install redux-thunk --save
 
 
-## connect react and redux
+## 4-6: connect react and redux
 npm install react-redux --save
 
 
-##
+## 4-7: @connect Adorner mode
 npm install babel-plugin-transform-decorators-legacy --save-dev
+ "plugins": [
+    "transform-decorators-legacy"
+ ]
 
 
 ##
