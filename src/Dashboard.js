@@ -24,11 +24,11 @@ function Qibinglian() {
 )
 class Dashboard extends Component {
   render() {
+    const match = this.props.match
+    console.log(match)
     // match: get the hit route
     // match.url: real route
     // match.path: youreself defined route
-    const match = this.props.match
-    console.log(match)
     const redirectToLogin = <Redirect to='/login'/>
     const app = (
         <div>
@@ -56,6 +56,7 @@ class Dashboard extends Component {
           <Route path={`${match.url}/qibinglian`} component={Qibinglian}/>
         </div>
     )
+
     // isAuth: Auth.redux.js
     return this.props.isAuth ? app : redirectToLogin
   }
