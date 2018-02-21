@@ -61,7 +61,7 @@ class Test extends React.Component {
     // can see history, location, match
     console.log(this.props)
     // History jump
-    this.props.history.push('/')
+    // this.props.history.push('/')
     // Parameters/:location
     return <h2>get Parameters: {this.props.match.params.location}</h2>
   }
@@ -82,13 +82,16 @@ ReactDom.render(
               <Link to='/qibinglian'>Three</Link>
             </li>
           </ul>
-          {/* exact: Full match/jump to app */}
-          <Route path='/' exact component={App}></Route>
-          <Route path='/erying' component={Erying}></Route>
-          <Route path='/qibinglian' component={Qibinglian}></Route>
-          {/* Default Jump */}
-          {/* Parameters/:location */}
-          <Redirect to='/:location'></Redirect>
+          <Switch>
+            {/* exact: Full match/jump to app */}
+            <Route path='/' exact component={App}/>
+            <Route path='/erying' component={Erying}/>
+            <Route path='/qibinglian' component={Qibinglian}/>
+            <Route path='/:location' component={Test}/>
+            {/* Default Jump */}
+            {/* Parameters/:location */}
+            {/*<Redirect to='/:location'></Redirect>*/}
+          </Switch>
         </div>
       </BrowserRouter>
     </Provider>),
