@@ -96,16 +96,3 @@ mongo
 cd server -> nodemon server.js
 ### 4) app run in browser
 npm start
-
-
-##
-npm install cookie-parser --save
-
-
-## 类型检测,1.6删除了,要install
-npm install prop-types --save
-```
-  static propTypes = {
-    selectAvatar: PropTypes.func.isRequired
-  }
-```
