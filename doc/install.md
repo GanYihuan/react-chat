@@ -83,8 +83,19 @@ npm install babel-plugin-transform-decorators-legacy --save-dev
 npm install react-router-dom --save
 
 
-##
+## 5-2: 发送请求库
 npm install axios --save
+## package.json : 统一到指定端口
+"proxy": "http://localhost:9093"
+## run app
+### 1) iTerm
+sudo mongod
+### 2) open aother iTerm tab
+mongo
+### 3) mongo data
+cd server -> nodemon server.js
+### 4) app run in browser
+npm start
 
 
 ##
