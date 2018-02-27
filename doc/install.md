@@ -16,11 +16,9 @@ npm run eject
 
 ## 2-3
 npm install express --save
-
-
 ## Unlimited Refresh
 npm install -g nodemon
-## run, into server.js path
+## run, into server/server.js path
 nodemon server.js
  
 
