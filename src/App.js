@@ -55,6 +55,7 @@ class Yiying extends React.Component {
   }
 
   // Arrow function to resolve this problem
+  // addSoldier = () => {}
   addSoldier() {
     this.setState({
       // ...this.state.soldiers: expand
@@ -68,8 +69,12 @@ class Yiying extends React.Component {
     return (
         <div>
           <h2>一营长，{this.props.boss}</h2>
-          {/* Arrow function to resolve this problem */}
+          {/* Arrow function to resolve 'this' problem */}
           {/* Button: antd-mobile component */}
+          {/*<Button*/}
+              {/*type={'primary'}*/}
+              {/*onClick={() => this.addSoldier()}*/}
+          {/*>新兵入伍</Button>*/}
           <Button
               type={'primary'}
               onClick={this.addSoldier}
