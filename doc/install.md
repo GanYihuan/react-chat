@@ -42,6 +42,9 @@ npm start
 ## 3-2: component Passing Data
 
 
+## 3-3: state Management status
+
+
 ## 3-7: 
 npm install antd-mobile --save
 ## install latest
