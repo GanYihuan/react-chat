@@ -67,7 +67,7 @@ class Yiying extends React.Component {
     const Item = List.Item
     return (
         <div>
-          <h2>yiying营长，{this.props.boss}</h2>
+          <h2>一营长，{this.props.boss}</h2>
           {/* Arrow function to resolve this problem */}
           {/* Button: antd-mobile component */}
           <Button
@@ -86,7 +86,7 @@ class Yiying extends React.Component {
 }
 
 function Qibinglian(props) {
-  return <h2>qibinglian连长: {props.boss},冲啊！</h2>
+  return <h2>骑兵连连长: {props.boss},冲啊！</h2>
 }
 
 export default App;

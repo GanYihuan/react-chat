@@ -39,6 +39,9 @@ npm start
 ## 3-1: react basis
 
 
+## 3-2: component Passing Data
+
+
 ## 3-7: 
 npm install antd-mobile --save
 ## install latest
