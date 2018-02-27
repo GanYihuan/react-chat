@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
-
-// 连接 mongo, use imooc set
+// connect mongo, use imooc set
+// iTerm, mongo
 const DB_URL = 'mongodb://localhost:27017/imooc'
 mongoose.connect(DB_URL)
 mongoose.connection.on('connected', function () {
@@ -9,13 +9,13 @@ mongoose.connection.on('connected', function () {
   console.log('mongo connect server')
 })
 
-// 定义文档模型
+// Defining a document Model
 const User = mongoose.model('user', new mongoose.Schema({
   user: {type: String, require: true},
   age: {type: String, require: true}
 }))
 
-// 新增数据
+// New data
 User.create({
   name: 'xiaohua',
   age: 14
@@ -39,7 +39,6 @@ User.update({'name': 'xiaoming'}, {'$set': {age: 30}}, function (err, doc) {
 
 // create app
 const app = express()
-
 app.get('/', function (req, res) {
   res.send('<h1>hello world</h1>')
 })
