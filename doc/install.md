@@ -51,6 +51,9 @@ npm start
 ## 3-5: life circle
 
 
+## 3-6: chrome browser tool -> React 
+
+
 ## 3-7: 
 npm install antd-mobile --save
 ## install latest
