@@ -1,24 +1,81 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-// redux handle async
+import ReactDom from 'react-dom'
+// async
 import thunk from 'redux-thunk'
-// applyMiddleware open thunk Middleware
-// compose combine function
+// applyMiddleware: thunk
+// compose: combine function
 import {createStore, applyMiddleware, compose} from 'redux'
-// pass store, connect react and redux
+// pass store
 import {Provider} from 'react-redux'
-// reducer
-import {counter} from './redux-2'
-import App from './App-2'
+// Router4
+import {
+  BrowserRouter,
+  Route,
+  Redirect,
+  Switch,
+  Link
+} from 'react-router-dom'
+// Merges all reducer and returns
+import reducers from './reducer'
+// component
+import App from './App' // 4-8, 4-9
 
-const store = createStore(counter, compose(
+const store = createStore(reducers, compose(
     applyMiddleware(thunk),
-    // open chrome devTools, Redux
     window.devToolsExtension ? window.devToolsExtension() : f => f
 ))
-ReactDOM.render(
+console.log(store.getState())
+
+function Erying() {
+  return <h2>二营</h2>
+}
+
+function Qibinglian() {
+  return <h2>骑兵连</h2>
+}
+
+class Test extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    // can see history, location(页面信息), match(参数)
+    console.log(this.props)
+    // History jump
+    // this.props.history.push('/')
+    // Parameters/:location
+    return <h2>get Parameters: {this.props.match.params.location}</h2>
+  }
+}
+
+ReactDom.render(
     (<Provider store={store}>
-      <App/>
+      <BrowserRouter>
+        <div>
+          <ul>
+            <li>
+              <Link to='/'>One</Link>
+            </li>
+            <li>
+              <Link to='/erying'>Two</Link>
+            </li>
+            <li>
+              <Link to='/qibinglian'>Three</Link>
+            </li>
+          </ul>
+          <Switch>
+            {/* exact: Full match/jump to app */}
+            <Route path='/' exact component={App}/>
+            <Route path='/erying' component={Erying}/>
+            <Route path='/qibinglian' component={Qibinglian}/>
+            <Route path='/:location' component={Test}/>
+            {/* Default Jump */}
+            {/* Parameters/:location */}
+            <Redirect to='/:location'/>
+          </Switch>
+        </div>
+      </BrowserRouter>
     </Provider>),
     document.getElementById('root')
 )
