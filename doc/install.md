@@ -77,6 +77,9 @@ npm install babel-plugin-import --save
   },
 
 
+## 4-1: Redux -> control data status
+
+
 ## 4-6: redux handle async
 npm install redux-thunk --save
 
