@@ -92,7 +92,11 @@ npm install react-redux --save
 
 
 ## 4-7: @connect Adorner mode
+## config
+npm run eject
+##
 npm install babel-plugin-transform-decorators-legacy --save-dev
+## package.json 
  "plugins": [
     "transform-decorators-legacy"
  ]
