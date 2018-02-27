@@ -11,6 +11,9 @@ npm install redux --save
 npm run eject
 
 
+## 2-2: es6
+
+
 ## 2-3
 npm install express --save
 
