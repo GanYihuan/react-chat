@@ -1,10 +1,8 @@
 #
 
-## react framework
+## 2-1: react framework
 npm install -g create-react-app
 create-react-app projectName
-
-
 ## run in browser
 npm start
 
