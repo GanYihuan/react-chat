@@ -13,6 +13,7 @@ import App from './App-2'
 
 const store = createStore(counter, compose(
     applyMiddleware(thunk),
+    // open chrome devTools, Redux
     window.devToolsExtension ? window.devToolsExtension() : f => f
 ))
 ReactDOM.render(

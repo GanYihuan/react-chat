@@ -84,6 +84,9 @@ npm install babel-plugin-import --save
 npm install redux-thunk --save
 
 
+## 4-5: open chrome devTools, Redux
+
+
 ## 4-6: connect react and redux
 npm install react-redux --save
 
