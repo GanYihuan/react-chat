@@ -48,6 +48,9 @@ npm start
 ## 3-4: event
 
 
+## 3-5: life circle
+
+
 ## 3-7: 
 npm install antd-mobile --save
 ## install latest
