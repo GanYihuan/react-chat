@@ -17,15 +17,14 @@ function Qibinglian() {
 }
 
 @connect(
-    // index.js: store.getState()
-    // auth: Auth.redux.js
+    // auth: reducers.js
     state => state.auth,
     {logout}
 )
 class Dashboard extends Component {
   render() {
     const match = this.props.match
-    console.log(match)
+    // console.log(this.props.match)
     // match: get the hit route
     // match.url: real route
     // match.path: youreself defined route

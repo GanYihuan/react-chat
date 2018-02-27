@@ -7,7 +7,7 @@ import axios from 'axios'
 // Two reducers each reducers has a state
 // Merging Reducers
 @connect(
-    // index.js: store.getState()
+    // reducer.js : auth
     state => state.auth,
     {login, getUserData}
 )

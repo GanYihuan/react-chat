@@ -7,7 +7,7 @@ import {addGun, removeGun, addGunAsync} from './redux-2'
 @connect(
     // matStatetoProps
     // state put into props
-    state => ({num: state}),
+    state => ({num: state.counter}),
     // actionCreators
     // addGun(), removeGun(), addGunAsync() put into props, auto dispatch
     {addGun, removeGun, addGunAsync}
