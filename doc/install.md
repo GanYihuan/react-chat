@@ -55,9 +55,9 @@ npm start
 
 
 ## 3-7: 
-npm install antd-mobile --save
 ## install latest
 npm install antd-mobile@next --save
+npm install antd-mobile --save
 ## 
 npm install babel-plugin-import --save
 ## package.json, config like this, can delete .css file

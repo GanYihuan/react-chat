@@ -64,8 +64,6 @@ class Yiying extends React.Component {
   }
 
   render() {
-    // Item, List: antd-mobile component
-    const Item = List.Item
     return (
         <div>
           <h2>一营长，{this.props.boss}</h2>
@@ -83,7 +81,9 @@ class Yiying extends React.Component {
               renderHeader={() => 'soldier list'}
               className='my-list'
           >
-            {this.state.soldiers.map(v => <Item key={v}>{v}</Item>)}
+            {this.state.soldiers.map(v => (
+                <List.Item key={v}>{v}</List.Item>
+            ))}
           </List>
         </div>
     )
