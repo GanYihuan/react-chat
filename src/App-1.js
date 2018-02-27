@@ -7,8 +7,8 @@ class App extends React.Component {
     return (
         <div>
           <h2>独立团，团长{boss}</h2>
-          <Yiying boss='张大喵'></Yiying>
-          <Qibinglian boss='孙德胜'></Qibinglian>
+          <Yiying boss='张大喵'/>
+          <Qibinglian boss='孙德胜'/>
         </div>
     )
   }
