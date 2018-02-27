@@ -103,7 +103,7 @@ npm install babel-plugin-transform-decorators-legacy --save-dev
 
 
 ## 4-8: --- 4-9:
-## router4, router component
+## router4, router component.
 npm install react-router-dom --save
 
 
