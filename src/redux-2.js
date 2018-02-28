@@ -3,7 +3,7 @@ const REMOVE_GUN = 'reduce machine guns'
 
 // This is the reducer handler function, the parameter is the state and the new action
 export function counter(state = 10, action) {
-  // let state = state||0
+  // console.log(state)
   switch (action.type) {
     case ADD_GUN:
       return state + 1

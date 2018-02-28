@@ -110,6 +110,10 @@ npm install react-router-dom --save
 ## 4-10: router4, login
 
 
+## 4-11: login auth
+combineReducers
+
+
 ## 5-1: 需求分析
 
 
