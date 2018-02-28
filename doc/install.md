@@ -114,6 +114,9 @@ npm install react-router-dom --save
 combineReducers
 
 
+## 4-12: const match = this.props.match
+
+
 ## 5-1: 需求分析
 
 

@@ -23,7 +23,7 @@ export function auth(state = initState, action) {
   }
 }
 
-// async
+// Async
 export function getUserData() {
   // dispatch: Used to notify data modifications
   return dispatch => {
