@@ -38,6 +38,7 @@ export function getUserData() {
 }
 
 // action creators
+// payload: ueser data
 export function userData(data) {
   return {type: USER_DATA, payload: data}
 }

@@ -9,6 +9,8 @@ axios.interceptors.request.use(function (config) {
 
 // Intercept the corresponding
 axios.interceptors.response.use(function (config) {
-  Toast.hide()
+  setTimeout(() => {
+    Toast.hide()
+  }, 1000)
   return config
 })
