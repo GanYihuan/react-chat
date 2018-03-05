@@ -6,16 +6,16 @@ console.log(name)
 
 
 const name = 'imooc'
-name = 'woniu'
+// name = 'woniu'
 // Constants defined by const cannot be modified
 console.log(name)
 
 
 
-name = 'imooc';
-age = '28';
+let name7 = 'imooc';
+let age7 = '28';
 // Template strings: Substituting "+" stitching
-console.log(`Name: ${name}, Age: ${age}`);
+console.log(`Name: ${name7}, Age: ${age7}`);
 
 
 
@@ -123,4 +123,4 @@ app.sayHello();
 
 
 // All introduced
-import * as mod from ''
+// import * as mod from ''
