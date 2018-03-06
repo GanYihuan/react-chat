@@ -72,6 +72,7 @@ npm install antd-mobile --save
 ## 
 npm install babel-plugin-import --save
 ## package.json, config like this, can delete .css file
+```
 "babel": {
     "presets": [
       "react-app"
@@ -86,3 +87,49 @@ npm install babel-plugin-import --save
       ]
     ]
   },
+```
+
+
+## 4-1: Redux -> control data status
+
+ 
+## 4-2 --- 4-4: 
+## redux handle async
+npm install redux-thunk --save
+## applyMiddleware开启thunk中间件
+## Action返回函数，dispatch提交action
+
+
+## 4-5: open chrome devTools, Redux
+
+
+## 4-6: connect react and redux
+npm install react-redux --save
+
+
+## 4-7: @connect Adorner mode
+## config
+npm run eject
+## 
+npm install babel-plugin-transform-decorators-legacy --save-dev
+## package.json 
+```
+ "plugins": [
+    "transform-decorators-legacy"
+ ]
+```
+
+
+## 4-8: --- 4-9:
+## router4, router component.
+npm install react-router-dom --save
+
+
+## 4-10: router4, login
+
+
+## 4-11: login auth
+combineReducers
+
+
+## 4-12: const match = this.props.match

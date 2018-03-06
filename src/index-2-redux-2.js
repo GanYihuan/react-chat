@@ -9,6 +9,7 @@ import {createStore, applyMiddleware, compose} from 'redux'
 import {Provider} from 'react-redux'
 // reducer
 import {counter} from './redux-2'
+// component
 import App from './App-2'
 
 const store = createStore(counter, compose(
