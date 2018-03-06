@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Redirect} from 'react-router-dom'
 import {login, getUserData} from './Auth.redux'
-import axios from 'axios'
+// import axios from 'axios'
 
 // Two reducers each reducers has a state
 // Merging Reducers

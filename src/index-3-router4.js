@@ -5,7 +5,7 @@ import thunk from 'redux-thunk'
 // applyMiddleware: thunk
 // compose: combine function
 import {createStore, applyMiddleware, compose} from 'redux'
-// pass store
+// pass store, connect react and redux
 import {Provider} from 'react-redux'
 // Router4
 import {
@@ -40,7 +40,9 @@ class Test extends React.Component {
   }
 
   render() {
-    // can see history, location, match
+    // history: 历史，路由跳转用
+    // location: 当前页面信息, url:域名后面地址, path:原生定义的地址
+    // match: 参数使用
     console.log(this.props)
     // History jump
     // this.props.history.push('/')
@@ -65,12 +67,12 @@ ReactDom.render(
             </li>
           </ul>
           <Switch>
-            {/* exact: Full match/jump to app */}
+            {/* exact: 完全匹配，防止包含关系 */}
             <Route path='/' exact component={App}/>
             <Route path='/erying' component={Erying}/>
             <Route path='/qibinglian' component={Qibinglian}/>
             <Route path='/:location' component={Test}/>
-            {/* Default Jump */}
+            {/* 默认跳转 */}
             {/* Parameters/:location */}
             <Redirect to='/:location'/>
           </Switch>

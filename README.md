@@ -123,6 +123,12 @@ npm install babel-plugin-transform-decorators-legacy --save-dev
 ## 4-8: --- 4-9:
 ## router4, router component.
 npm install react-router-dom --save
+## BrowserRouter: 包裹整个应用
+## Router 路由对应渲染的组件，可嵌套
+## Link 跳转专用
+## ul参数, Route组件参数可用冒号标识参数
+## Redirect组件跳转
+## Switch 只渲染一个子Route组件
 
 
 ## 4-10: router4, login
