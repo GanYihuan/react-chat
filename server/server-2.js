@@ -1,21 +1,21 @@
 const express = require('express')
 const mongoose = require('mongoose')
 // connect mongo, use imooc set
-// iTerm, mongo
+// copy from: iTerm mongo
 const DB_URL = 'mongodb://localhost:27017/imooc'
 mongoose.connect(DB_URL)
+// if connect success
 mongoose.connection.on('connected', function () {
-  // if connect success
   console.log('mongo connect server')
 })
 
-// Defining a document Model
+// Defining a document Model, 类似于MySQL的表
 const User = mongoose.model('user', new mongoose.Schema({
   user: {type: String, require: true},
   age: {type: String, require: true}
 }))
 
-// New data
+// 增加数据
 User.create({
   name: 'xiaohua',
   age: 14
@@ -43,6 +43,7 @@ app.get('/', function (req, res) {
   res.send('<h1>hello world</h1>')
 })
 app.get('/data', function (req, res) {
+  // 查询数据
   User.find({}, function (err, doc) {
     res.json(doc)
   })

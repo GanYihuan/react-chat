@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
 
-app.use('/user', function (req, res) {
+// req: 请求
+// res: 获取
+app.get('/', function (req, res) {
   res.send('<h1>hello world</h1>')
 })
 
