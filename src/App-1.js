@@ -21,6 +21,7 @@ class Yiying extends React.Component {
     this.state = {
       soldiers: ['虎子', '柱子', '王根生']
     }
+    // 1) to resolve "this" problem
     this.addSoldier = this.addSoldier.bind(this)
     console.log('组件初始化')
   }
@@ -54,22 +55,26 @@ class Yiying extends React.Component {
     console.log("组件卸载了");
   }
 
-  // Arrow function to resolve this problem
+  // 2) Arrow function to resolve "this" problem
+  // addSoldier = () => {}
   addSoldier() {
     this.setState({
-      // ...this.state.soldiers: expand
+      // ...this.state.soldiers: 在原来基础上扩展内容
       soldiers: [...this.state.soldiers, '新兵蛋子' + Math.random()]
     })
   }
 
   render() {
-    // Item, List: antd-mobile component
-    const Item = List.Item
     return (
         <div>
-          <h2>yiying营长，{this.props.boss}</h2>
-          {/* Arrow function to resolve this problem */}
+          {/* this.props获取外部传入的值 */}
+          <h2>一营长，{this.props.boss}</h2>
+          {/* 3) Arrow function to resolve 'this' problem */}
           {/* Button: antd-mobile component */}
+          {/*<Button*/}
+          {/*type={'primary'}*/}
+          {/*onClick={() => this.addSoldier()}*/}
+          {/*>新兵入伍</Button>*/}
           <Button
               type={'primary'}
               onClick={this.addSoldier}
@@ -78,7 +83,9 @@ class Yiying extends React.Component {
               renderHeader={() => 'soldier list'}
               className='my-list'
           >
-            {this.state.soldiers.map(v => <Item key={v}>{v}</Item>)}
+            {this.state.soldiers.map(v => (
+                <List.Item key={v}>{v}</List.Item>
+            ))}
           </List>
         </div>
     )
@@ -86,7 +93,7 @@ class Yiying extends React.Component {
 }
 
 function Qibinglian(props) {
-  return <h2>qibinglian连长: {props.boss},冲啊！</h2>
+  return <h2>骑兵连连长: {props.boss},冲啊！</h2>
 }
 
 export default App;

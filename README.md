@@ -44,3 +44,45 @@ mongo
 nodemon server.js
 ## projectName path
 npm start
+
+
+## 3-1: react basis
+
+
+## 3-2: component Passing Data
+
+
+## 3-3: state Management status
+
+
+## 3-4: event
+## 解决this作用域问题
+
+
+## 3-5: life circle
+
+
+## 3-6: chrome browser tool -> React 
+
+
+## 3-7: UI
+## install latest
+npm install antd-mobile@next --save
+npm install antd-mobile --save
+## 
+npm install babel-plugin-import --save
+## package.json, config like this, can delete .css file
+"babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      [
+        "import",
+        {
+          "libraryName": "antd-mobile",
+          "style": "css"
+        }
+      ]
+    ]
+  },
