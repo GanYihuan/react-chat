@@ -38,7 +38,7 @@ export function getUserData() {
 }
 
 // action creators
-// payload: ueser data
+// payload: Custom data
 export function userData(data) {
   return {type: USER_DATA, payload: data}
 }
