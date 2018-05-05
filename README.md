@@ -6,6 +6,7 @@
 
 
 ## 2-1: React development environment
+_✨✨_
 ##### iTerm
 ```
 npm install -g create-react-app
@@ -26,14 +27,18 @@ npm run eject
 
 
 ## 2-2: branch *learn* -> ES6
+_✨✨✨_
+_ES6_
 
 
-## 2-3
-##### express+mongodb,开发web后台接口
+## 2-3: express
+_✨✨✨_
+_server/server.js_
+##### express+mongodb,Develop the web background interface.
 ```
 npm install express --save
 ```
-##### 自动刷新后台
+##### Auto refresh background
 ```
 npm install -g nodemon
 ```
