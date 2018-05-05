@@ -37,7 +37,7 @@ let arr6 = [1, 2, 3].indexOf(2)
 console.log(arr6)
 
 
-// Connecting arrays
+// Expend
 let arr7 = [1, 2, 3]
 let arr8 = [4, 5, 6]
 let obj1 = [...arr7, ...arr8]

@@ -1,34 +1,46 @@
 # imooc-chat
-
-## http://localhost:3000/login
-
-## http://localhost:3000/register
-
 # Redux+Router+Node.js全栈开发
 
+## http://localhost:3000/login
+## http://localhost:3000/register
 
-## 2-1: react framework
+
+## 2-1: React development environment
+##### iTerm
+```
 npm install -g create-react-app
 create-react-app projectName
-## run in browser
-npm start
-## redux
+```
+##### redux
+```
 npm install redux --save
-## 弹出配置文件，自定义配置webpack
+```
+##### run in browser
+```
+npm start
+```
+##### Pop-up configuration file, custom configuration webpack
+```
 npm run eject
+```
 
 
-## 2-2: 
-## es6
+## 2-2: branch *learn* -> ES6
 
 
 ## 2-3
-## express+mongodb,开发web后台接口
+##### express+mongodb,开发web后台接口
+```
 npm install express --save
-## 自动刷新后台
+```
+##### 自动刷新后台
+```
 npm install -g nodemon
-## run, into server/server.js path
+```
+##### run, into server/server.js path
+```
 nodemon server.js
+```
  
 
 ## 2-4
@@ -165,3 +177,111 @@ npm start
 
 
 ## 5-3: Intercepting
+
+
+## 6-1: user Authentication, express need it
+npm install cookie-parser --save
+## cookie like a creditcard, when login the server will return
+## carry a cookie can access some resource
+
+
+## 6-2: page design
+
+
+## 6-3: 
+## checked route
+## server/user.js
+
+
+## 6-4:
+## auth login
+
+
+## 6-5: register component func
+
+
+## 6-6: user.redux
+
+
+## 6-7: create server model
+
+
+## 6-8: /register user.js
+## 接收post参数
+npm install body-parser --save
+
+
+## 6-9: --- 6-10: register jump, md5 encryption
+## md5 Encryption
+npm install utility --save
+
+
+## 6-11: /login user.js 
+
+
+## 6-12: cookies save login status
+
+
+## 类型检测,1.6删除了,要install.
+npm install prop-types --save
+``` 
+  static propTypes = {
+    selectAvatar: PropTypes.func.isRequired
+  }
+```
+
+
+## 7-1: bossinfo component
+
+
+## 7-2: bossinfo component
+
+
+## 7-3: 类型检测
+npm install prop-types --save
+``` 
+  static propTypes = {
+    selectAvatar: PropTypes.func.isRequired
+  }
+```
+
+
+## 8-1: create component
+
+
+## 8-2: route jump
+
+
+## 8-3: usercard component
+
+
+## 8-4: chatuser.redux.js
+
+
+## 9-1: usercard.js
+
+
+## 9-2: create user component
+
+
+## 9-3: usercenter show
+
+
+## 9-4: usercenter logout
+## chrome dev basic knowledge
+npm install browser-cookies --save
+cookies.set()
+cookies.get()
+cookies.erase()
+
+
+## 9-5: logout reset data
+
+
+## 9-6: Higher-order components
+
+
+## 9-7: Higher-order components
+
+
+## 9-8: Higher-order components imooc-form

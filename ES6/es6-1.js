@@ -13,22 +13,22 @@ const name = 'imooc'
 console.log(name)
 
 
-// 模板字符串
+// Template string
 let name7 = 'imooc'
 let age7 = '28'
 // Template strings: Substituting "+" stitching
 console.log(`Name: ${name7}, Age: ${age7}`)
 
 
-// 箭头函数
+// arrow function
 function hello(name) {
   console.log(`hello ${name}`)
 }
+hello('world')
 // Arrow function with default parameter
 let hello1 = (name = 'world') => {
   console.log(`hello ${name}`)
 }
-hello('world')
 hello1('world')
 setTimeout(() => {
   console.log('箭头函数保持this作用域');
@@ -39,13 +39,13 @@ let cal = num => num * 2
 let cal1 = (num1, num2) => num1 * num2
 
 
-// 展开符
+// Expend
 function hello3(name1, name2) {
   console.log(name1, name2)
 }
 let arr = ['Gan', 'Ehank']
 // ES5 Expand Array Pass Value
-hello.apply(null, arr)
+hello3.apply(null, arr)
 // ES6 Expand Array Pass Value
 hello3(...arr)
 
@@ -61,7 +61,7 @@ console.log(Object.values(object))
 console.log(Object.entries(object))
 
 
-// 计算属性
+// Calculation properties
 const name2 = 'imooc2'
 const obj = {
   name2: 'hello'
@@ -87,7 +87,7 @@ console.log(obj3)
 // }
 
 
-// 对象合并
+// Object to merge
 const obj4 = {name: 'imooc', course: 'react'}
 const obj5 = {type: 'it', name: 'woniu'}
 console.log({...obj4, ...obj5, date: '2017'})
@@ -99,7 +99,7 @@ console.log({...obj4, ...obj5, date: '2017'})
 // }
 
 
-// 结构赋值
+// Deconstruction assignment
 const arr2 = ['hello', 'imooc']
 let [arg1, arg2] = arr2
 console.log(arg1, '|', arg2)
@@ -110,11 +110,12 @@ console.log(name5, '|', course5)
 // imooc5 | reac5
 
 
-// 构造函数
+// constructor function
 class MyApp {
   constructor() {
     this.name = 'imooc6'
   }
+
   sayHello() {
     console.log(`hello ${this.name} !`)
   }
@@ -124,5 +125,5 @@ const app = new MyApp()
 app.sayHello()
 
 
-// 所有引入
+// all import
 // import * as mod from ''
