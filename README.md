@@ -127,7 +127,7 @@ npm install antd-mobile --save
 ```
 npm install babel-plugin-import --save
 ```
-##### package.json, config like this, can delete .css file
+##### package.json, config like this, auto import antd-mobile 
 ```
 "babel": {
     "presets": [
@@ -146,10 +146,24 @@ npm install babel-plugin-import --save
 ```
 
 
-## 4-1: Redux -> control data status
+## 4-1: Redux control data status
+_✨✨✨_
+_index-1-redux-1.js_
+##### redux install
+```
+npm install redux --save
+```
+##### introduce:
+##### 1. safe box(store), record(state)
+##### 2. Commissioner(dispatch), doing(action)
+##### 3. practitioners(reducer), get state and action create new state
+##### Use:
+##### 1. through reducer create store, use store.getState get status
+##### 2. status change, store.dispatch(action) change status
+##### 3. reducer accept state and action return new state, use store.subscribe listen modify
 
  
-## 4-2 --- 4-4: 
+## 4-2, 4-3, 4-4: 
 ## redux handle async
 npm install redux-thunk --save
 ## applyMiddleware开启thunk中间件

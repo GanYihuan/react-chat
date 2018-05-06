@@ -25,6 +25,7 @@ function listener() {
   // Note that the symbol above the TAB key is
   console.log(`have ${current}`);
 }
+
 // 3) Listening, subscribing
 store.subscribe(listener);
 
