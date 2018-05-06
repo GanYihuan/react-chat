@@ -40,7 +40,7 @@ class Yiying extends React.Component {
 
   shouldComponentUpdate() {
     console.log("判断是不是要更新组件");
-    return true;        // 记得要返回true
+    return true;
   }
 
   componentWillUpdate() {
@@ -59,7 +59,7 @@ class Yiying extends React.Component {
   // addSoldier = () => {}
   addSoldier() {
     this.setState({
-      // ...this.state.soldiers: 在原来基础上扩展内容
+      // ...this.state.soldiers: Expand the content on the original basis.
       soldiers: [...this.state.soldiers, '新兵蛋子' + Math.random()]
     })
   }
@@ -67,7 +67,7 @@ class Yiying extends React.Component {
   render() {
     return (
         <div>
-          {/* this.props获取外部传入的值 */}
+          {/* this.props: Gets the external incoming value.*/}
           <h2>一营长，{this.props.boss}</h2>
           {/* 3) Arrow function to resolve 'this' problem */}
           {/* Button: antd-mobile component */}

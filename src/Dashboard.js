@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 import {connect} from 'react-redux'
 import {logout} from './Auth.redux.js'
-import App from './App'
+import App from './App-1'
 
 function Erying() {
   return <h2>二营</h2>

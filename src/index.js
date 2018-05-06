@@ -1,36 +1,24 @@
-import {createStore} from 'redux';
+import React from 'react'
+import ReactDOM from 'react-dom'
+// redux handle async
+import thunk from 'redux-thunk'
+// applyMiddleware open thunk Middleware
+// compose combine function
+import {createStore, applyMiddleware, compose} from 'redux'
+// pass store, connect react and redux
+import {Provider} from 'react-redux'
+// reducer
+import {counter} from './redux-2'
+// component
+import App from './App-2'
 
-// 1) reducer
-// Generate new state based on Old State and action
-function counter(state = 0, action) {
-  switch (action.type) {
-    case 'add':
-      return state + 1;
-    case 'decrease':
-      return state - 1;
-    default:
-      return 10;
-  }
-}
-
-// 2) create store
-const store = createStore(counter);
-// Get status
-const init = store.getState();
-console.log(init);
-
-function listener() {
-  // Get status
-  const current = store.getState();
-  // Note that the symbol above the TAB key is
-  console.log(`have ${current}`);
-}
-
-// 3) Listening, subscribing
-store.subscribe(listener);
-
-// 4) Distributing events, passing action
-// Handling Events
-store.dispatch({type: 'add'});
-store.dispatch({type: 'add'});
-store.dispatch({type: 'decrease'});
+const store = createStore(counter, compose(
+    applyMiddleware(thunk),
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+))
+ReactDOM.render(
+    (<Provider store={store}>
+      <App/>
+    </Provider>),
+    document.getElementById('root')
+)

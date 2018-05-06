@@ -18,7 +18,7 @@ import {
 // Merges all reducer and returns
 import reducers from './reducer'
 // component
-import App from './App' // 4-8, 4-9
+import App from './App-1' // 4-8, 4-9
 
 const store = createStore(reducers, compose(
     applyMiddleware(thunk),

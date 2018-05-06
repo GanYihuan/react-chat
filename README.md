@@ -81,7 +81,7 @@ npm start
 
 ## 3-1: react basis
 _✨✨✨_
-_App.js_
+_App-1.js_
 ##### 1. install react
 ```
 npm install --save react
@@ -94,22 +94,22 @@ npm start
 
 ## 3-2: component transfer Data
 _✨✨✨_
-_App.js_
+_App-1.js_
 
 
 ## 3-3: state Management status
 _✨✨✨_
-_App.js_
+_App-1.js_
 
 
 ## 3-4: Solve this scope problem.
 _✨✨✨_
-_App.js_
+_App-1.js_
 
 
 ## 3-5: life circle
 _✨✨✨_
-_App.js_
+_App-1.js_
 
 
 ## 3-6: chrome browser tool -> React 
@@ -118,6 +118,7 @@ _✨_
 
 ## 3-7: antd-mobile UI
 _✨✨✨_
+_App-1.js_
 ##### install antd-mobile latest
 ```
 npm install antd-mobile@next --save
@@ -148,7 +149,8 @@ npm install babel-plugin-import --save
 
 ## 4-1: Redux control data status
 _✨✨✨_
-_index-1-redux-1.js_
+_App-1.js_
+_index-2-redux-1.js_
 ##### redux install
 ```
 npm install redux --save
@@ -163,26 +165,32 @@ npm install redux --save
 ##### 3. reducer accept state and action return new state, use store.subscribe listen modify
 
  
-## 4-2, 4-3, 4-4: 
-## redux handle async
+## 4-2, 4-3, 4-4, 4-5, 4-6, 4-7: Redux
+_✨✨✨✨_
+_App-2.js_
+_index-3-redux-2.js_
+_redux-2.js_
+##### redux handle async
+```
 npm install redux-thunk --save
-## applyMiddleware开启thunk中间件
-## Action返回函数，dispatch提交action
-
-
-## 4-5: open chrome devTools, Redux
-
-
-## 4-6: connect react and redux
+```
+##### applyMiddleware star thunk middleware
+##### Action return function，dispatch submit action
+##### 4-5. open chrome devTools, Redux
+##### 4-6. connect react and redux
+```
 npm install react-redux --save
-
-
-## 4-7: @connect Adorner mode
-## config
+```
+##### 4-7: @connect adorn mode
+##### config
+```
 npm run eject
-## 
+```
+##### 
+```
 npm install babel-plugin-transform-decorators-legacy --save-dev
-## package.json 
+```
+##### package.json 
 ```
  "plugins": [
     "transform-decorators-legacy"
