@@ -48,19 +48,35 @@ nodemon server.js
 ```
  
 
-## 2-4
-## 安装mongodb
+## 2-4: mongodb
+_✨✨✨_
+_server/server.js_
+##### install mongodb
+```
 brew install mongodb
-## 通过mongoose操作mongodb,存储的是json
+```
+##### By manipulating mongodb through mongoose, json is stored.
+```
 npm install mongoose --save
-## run mongo
+```
+##### run mongo
+##### 1. iTerm
+```
 sudo mongod
-## another iterm tab
+```
+##### 2. another iTerm tab
+```
 mongo
-## run, into server.js path
+```
+##### 3. run, into server.js path
+```
 nodemon server.js
-## projectName path
+```
+##### 4. projectName path
+```
 npm start
+```
+##### mongodb: Add Delete Modify Check
 
 
 ## 3-1: react basis
