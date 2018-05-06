@@ -17,7 +17,7 @@ class App extends React.Component {
 class Yiying extends React.Component {
   constructor(props) {
     super(props)
-    // Immutable objects, this.state gets
+    // Immutable objects
     this.state = {
       soldiers: ['虎子', '柱子', '王根生']
     }
@@ -67,7 +67,7 @@ class Yiying extends React.Component {
   render() {
     return (
         <div>
-          {/* this.props获取外部传入的值 */}
+          {/* this.props: Gets the external incoming value */}
           <h2>一营长，{this.props.boss}</h2>
           {/* 3) Arrow function to resolve 'this' problem */}
           {/* Button: antd-mobile component */}
@@ -83,7 +83,7 @@ class Yiying extends React.Component {
               renderHeader={() => 'soldier list'}
               className='my-list'
           >
-            {this.state.soldiers.map(v => (
+            {this.state.soldiers.map((v) => (
                 <List.Item key={v}>{v}</List.Item>
             ))}
           </List>

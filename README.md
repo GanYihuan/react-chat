@@ -94,6 +94,7 @@ npm start
 
 ## 3-2: component transfer Data
 _✨✨✨_
+_App.js_
 
 
 ## 3-3: state Management status
