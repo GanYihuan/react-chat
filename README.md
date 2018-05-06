@@ -113,6 +113,7 @@ _App.js_
 
 
 ## 3-6: chrome browser tool -> React 
+_✨_
 
 
 ## 3-7: UI
