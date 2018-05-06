@@ -21,7 +21,7 @@ class Yiying extends React.Component {
     this.state = {
       soldiers: ['虎子', '柱子', '王根生']
     }
-    // 1) to resolve "this" problem
+    // 1. resolve "this" problem: .bind(this)
     this.addSoldier = this.addSoldier.bind(this)
     console.log('组件初始化')
   }
@@ -55,7 +55,7 @@ class Yiying extends React.Component {
     console.log("组件卸载了");
   }
 
-  // 2) Arrow function to resolve "this" problem
+  // 2. resolve "this" problem: Arrow function
   // addSoldier = () => {}
   addSoldier() {
     this.setState({

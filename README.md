@@ -98,6 +98,8 @@ _App.js_
 
 
 ## 3-3: state Management status
+_✨✨✨_
+_App.js_
 
 
 ## 3-4: event
