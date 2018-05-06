@@ -27,15 +27,15 @@ class Yiying extends React.Component {
   }
 
   componentWillMount() {
-    console.log("组件马上就要挂载了");
+    console.log("组件马上就要嵌入了");
   }
 
   componentDidMount() {
-    console.log("组件已经挂载");
+    console.log("组件已经嵌入");
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log("组件要接收福组件的值了");
+    console.log("组件将要接收父组件的值");
   }
 
   shouldComponentUpdate() {

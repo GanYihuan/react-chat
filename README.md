@@ -102,11 +102,14 @@ _✨✨✨_
 _App.js_
 
 
-## 3-4: event
-## 解决this作用域问题
+## 3-4: Solve this scope problem.
+_✨✨✨_
+_App.js_
 
 
 ## 3-5: life circle
+_✨✨✨_
+_App.js_
 
 
 ## 3-6: chrome browser tool -> React 
