@@ -80,9 +80,20 @@ npm start
 
 
 ## 3-1: react basis
+_✨✨✨_
+_App.js_
+##### 1. install react
+```
+npm install --save react
+```
+##### 2. run react
+```
+npm start
+```
 
 
-## 3-2: component Passing Data
+## 3-2: component transfer Data
+_✨✨✨_
 
 
 ## 3-3: state Management status

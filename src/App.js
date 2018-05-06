@@ -72,8 +72,8 @@ class Yiying extends React.Component {
           {/* 3) Arrow function to resolve 'this' problem */}
           {/* Button: antd-mobile component */}
           {/*<Button*/}
-              {/*type={'primary'}*/}
-              {/*onClick={() => this.addSoldier()}*/}
+          {/*type={'primary'}*/}
+          {/*onClick={() => this.addSoldier()}*/}
           {/*>新兵入伍</Button>*/}
           <Button
               type={'primary'}
@@ -96,4 +96,4 @@ function Qibinglian(props) {
   return <h2>骑兵连连长: {props.boss},冲啊！</h2>
 }
 
-export default App;
+export default App
