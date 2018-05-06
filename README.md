@@ -116,13 +116,18 @@ _App.js_
 _✨_
 
 
-## 3-7: UI
-## install latest
+## 3-7: antd-mobile UI
+_✨✨✨_
+##### install antd-mobile latest
+```
 npm install antd-mobile@next --save
 npm install antd-mobile --save
-## 
+```
+##### Load components and styles as needed.
+```
 npm install babel-plugin-import --save
-## package.json, config like this, can delete .css file
+```
+##### package.json, config like this, can delete .css file
 ```
 "babel": {
     "presets": [
