@@ -167,9 +167,9 @@ npm install redux --save
  
 ## 4-2, 4-3, 4-4, 4-5, 4-6, 4-7: Redux
 _✨✨✨✨_
-_App-2.js_
-_index-3-redux-2.js_
-_redux-2.js_
+_App-2_
+_index-3-redux-2_
+_redux-2_
 ##### redux handle async
 ```
 npm install redux-thunk --save
@@ -198,15 +198,19 @@ npm install babel-plugin-transform-decorators-legacy --save-dev
 ```
 
 
-## 4-8: --- 4-9:
-## router4, router component.
+## 4-8, 4-9: Route4
+_✨✨✨✨_
+_index-4-router4-1_
+##### router4, router component.
+```
 npm install react-router-dom --save
-## BrowserRouter: 包裹整个应用
-## Router 路由对应渲染的组件，可嵌套
-## Link 跳转专用
-## ul参数, Route组件参数可用冒号标识参数
-## Redirect组件跳转
-## Switch 只渲染一个子Route组件
+```
+##### BrowserRouter: Package the whole application
+##### Router: Routing corresponds to the rendered component, which can be nested.
+##### Link: Jump is special
+##### ul: Route The component parameter can be identified by a colon.
+##### Redirect: Components to jump
+##### Switch: Render only a subroute component.
 
 
 ## 4-10: router4, login

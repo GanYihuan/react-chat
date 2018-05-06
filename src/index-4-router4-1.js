@@ -40,9 +40,11 @@ class Test extends React.Component {
   }
 
   render() {
-    // history: 历史，路由跳转用
-    // location: 当前页面信息, url:域名后面地址, path:原生定义的地址
-    // match: 参数使用
+    // history: History, route jump.
+    // location: Current page information,
+    // url: domain name after address,
+    // path: native defined address.
+    // match: Parameters using
     console.log(this.props)
     // History jump
     // this.props.history.push('/')
@@ -67,12 +69,13 @@ ReactDom.render(
             </li>
           </ul>
           <Switch>
-            {/* exact: 完全匹配，防止包含关系 */}
+            {/* Switch: Render only one Route. */}
+            {/* exact: Perfect match to prevent containment. */}
             <Route path='/' exact component={App}/>
             <Route path='/erying' component={Erying}/>
             <Route path='/qibinglian' component={Qibinglian}/>
             <Route path='/:location' component={Test}/>
-            {/* 默认跳转 */}
+            {/* The default jump */}
             {/* Parameters/:location */}
             <Redirect to='/:location'/>
           </Switch>
