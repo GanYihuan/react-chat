@@ -231,7 +231,8 @@ _✨_
 ##### axios拦截器，统一loading处理
 ##### redux里使用异步数据，渲染界面
 
-## 5-2: bug
+
+## 5-2:
 _✨✨✨✨_
 ##### Send request library
 ```
