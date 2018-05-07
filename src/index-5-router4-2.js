@@ -12,12 +12,10 @@ import {
   BrowserRouter,
   Route,
   Redirect,
-  Switch,
-  Link
+  Switch
 } from 'react-router-dom'
 // Merges all reducer and returns
 import reducers from './reducer'
-// component
 // import App from './App' // 4-8, 4-9
 import Auth from './Auth'
 import Dashboard from './Dashboard'
@@ -35,7 +33,7 @@ ReactDom.render(
           {/* Only the first route to render a hit */}
           <Route path='/login' component={Auth}/>
           <Route path='/dashboard' component={Dashboard}/>
-          {/*/!* Default Jump *!/*/}
+          {/* Default Jump */}
           <Redirect to='/dashboard'/>
         </Switch>
       </BrowserRouter>

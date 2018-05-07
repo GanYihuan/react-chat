@@ -2,7 +2,7 @@ const ADD_GUN = 'add machine gun.'
 const REMOVE_GUN = 'reduce machine guns'
 
 // This is the reducer handler function, the parameter is the state and the new action
-export function counter(state = 0, action) {
+export function counter(state = 10, action) {
   // let state = state||0
   switch (action.type) {
     case ADD_GUN:
@@ -10,7 +10,7 @@ export function counter(state = 0, action) {
     case REMOVE_GUN:
       return state - 1
     default:
-      return 10
+      return state
   }
 }
 
@@ -24,7 +24,6 @@ export function removeGun() {
   return {type: REMOVE_GUN}
 }
 
-// action creator, equal store.dispatch
 // async
 export function addGunAsync() {
   // thunk The role of Plug-ins, where you can return functions,

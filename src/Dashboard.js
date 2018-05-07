@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 import {connect} from 'react-redux'
 import {logout} from './Auth.redux.js'
-import App from './App-1'
+import App from './App-2'
 
 function Erying() {
   return <h2>二营</h2>
@@ -62,4 +62,3 @@ class Dashboard extends Component {
 }
 
 export default Dashboard
-

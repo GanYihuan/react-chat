@@ -1,14 +1,15 @@
 import React from 'react'
 // To obtain parameters from an external component
 import {connect} from 'react-redux'
-import {addGun, removeGun, addGunAsync} from './redux-2'
+import {addGun, removeGun, addGunAsync} from './redux'
 
 // adorn mode
 @connect(
     // matStatetoProps
     // state put into props
     // num: Internal name
-    state => ({num: state}),
+    // state => ({num: state}),
+    state => ({num: state.counter}),
     // actionCreators
     // addGun(), removeGun(), addGunAsync() put into props, auto dispatch
     {addGun, removeGun, addGunAsync}

@@ -213,14 +213,16 @@ npm install react-router-dom --save
 ##### Switch: Render only a subroute component.
 
 
-## 4-10: router4, login
-
-
-## 4-11: login auth
-combineReducers
-
-
-## 4-12: const match = this.props.match
+## 4-10, 4-11, 4-12: Router4, login
+_✨✨✨✨_
+_Auth_
+_Auth.redux_
+_Dashboard_
+_index-5-router-2_
+_reducer_
+_redux_
+##### combineReducers
+##### match
 
 
 ## 5-1: 需求分析
