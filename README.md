@@ -226,25 +226,28 @@ _redux_
 
 
 ## 5-1: 需求分析
-## 端口不一致时，使用proxy配置转发
-## axios拦截器，统一loading处理
-## redux里使用异步数据，渲染界面
+_✨_
+##### 端口不一致时，使用proxy配置转发
+##### axios拦截器，统一loading处理
+##### redux里使用异步数据，渲染界面
 
 
 ## 5-2: 发送请求库
+```
 npm install axios --save
-## package.json : 统一到指定端口
+```
+##### package.json : 统一到指定端口
 ```
 "proxy": "http://localhost:9093"
 ```
-## run app
-### 1) iTerm
+##### run app
+##### 1. iTerm
 sudo mongod
-### 2) open aother iTerm tab
+##### 2. open aother iTerm tab
 mongo
-### 3) mongo data
+##### 3) mongo data
 cd server -> nodemon server.js
-### 4) app run in browser
+##### 4) app run in browser
 npm start
 
 
