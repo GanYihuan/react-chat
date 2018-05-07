@@ -231,24 +231,34 @@ _✨_
 ##### axios拦截器，统一loading处理
 ##### redux里使用异步数据，渲染界面
 
-
-## 5-2: 发送请求库
+## 5-2: bug
+_✨✨✨✨_
+_index-6-demand_
+##### Send request library
 ```
 npm install axios --save
 ```
-##### package.json : 统一到指定端口
+##### package.json: Unify to the specified port.
 ```
 "proxy": "http://localhost:9093"
 ```
 ##### run app
 ##### 1. iTerm
+```
 sudo mongod
+```
 ##### 2. open aother iTerm tab
+```
 mongo
-##### 3) mongo data
+```
+##### 3. mongo data
+```
 cd server -> nodemon server.js
-##### 4) app run in browser
+```
+##### 4. app run in browser
+```
 npm start
+```
 
 
 ## 5-3: Intercepting

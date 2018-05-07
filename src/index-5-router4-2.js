@@ -19,12 +19,13 @@ import reducers from './reducer'
 // import App from './App' // 4-8, 4-9
 import Auth from './Auth'
 import Dashboard from './Dashboard'
+import './config'
 
 const store = createStore(reducers, compose(
     applyMiddleware(thunk),
     window.devToolsExtension ? window.devToolsExtension() : f => f
 ))
-console.log(store.getState())
+// console.log(store.getState())
 
 ReactDom.render(
     (<Provider store={store}>

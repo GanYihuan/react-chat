@@ -25,11 +25,11 @@ export function auth(state = initState, action) {
 
 // Async
 export function getUserData() {
-  // dispatch: Used to notify data modifications
+  // dispatch: Used to notify data modify
   return dispatch => {
     axios
         .get('/data')
-        .then(res => {
+        .then((res) => {
           if (res.status === 200) {
             dispatch(userData(res.data))
           }

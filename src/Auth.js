@@ -7,7 +7,7 @@ import {login, getUserData} from './Auth.redux'
 // Two reducers each reducers has a state
 // Merging Reducers
 @connect(
-    // reducer.js : auth
+    // reducer.js: auth
     state => state.auth,
     {login, getUserData}
 )
