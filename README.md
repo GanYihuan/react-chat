@@ -233,7 +233,6 @@ _✨_
 
 ## 5-2: bug
 _✨✨✨✨_
-_index-6-demand_
 ##### Send request library
 ```
 npm install axios --save
@@ -262,6 +261,8 @@ npm start
 
 
 ## 5-3: Intercepting
+_✨✨_
+_config_
 
 
 ## 6-1: user Authentication, express need it
