@@ -1,15 +1,15 @@
 const express = require('express')
 const mongoose = require('mongoose')
-// connect mongo, use imooc set
-// copy from: iTerm mongo
+
+// 连接mongo, 使用imooc-chat集合
+// copy from iTerm mongo
 const DB_URL = 'mongodb://localhost:27017/imooc'
 mongoose.connect(DB_URL)
-// if connect success
 mongoose.connection.on('connected', function () {
   console.log('mongo connect server')
 })
 
-// Defining a document Model, 类似于MySQL的表
+// 定义文档模型
 const User = mongoose.model('user', new mongoose.Schema({
   user: {type: String, require: true},
   age: {type: String, require: true}
@@ -32,13 +32,17 @@ User.create({
 //   console.log(doc)
 // })
 
-// 更新数据
+// 修改数据
 User.update({'name': 'xiaoming'}, {'$set': {age: 30}}, function (err, doc) {
   console.log(doc)
 })
 
-// create app
 const app = express()
+// res.send() 返回文本
+// res.json() 返回json
+// res.sendfile() 返回文件
+// 访问数据
+// http://localhost:9093
 app.get('/', function (req, res) {
   res.send('<h1>hello world</h1>')
 })
@@ -48,6 +52,7 @@ app.get('/data', function (req, res) {
     res.json(doc)
   })
 })
+// 监听端口
 app.listen(9093, function () {
   console.log('Node app start at port 9093')
 })

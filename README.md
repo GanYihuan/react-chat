@@ -1,169 +1,116 @@
 # imooc-chat
-# Redux+Router+Node.js全栈开发
+
+> Redux+Router+Node.js全栈开发
 
 ## http://localhost:3000/login
+
 ## http://localhost:3000/register
 
+## 2-1 介绍React开发环境
 
-## 2-1: React development environment
-_✨✨_
-##### iTerm
-```
+```node
 npm install -g create-react-app
 create-react-app projectName
-```
-##### redux
-```
 npm install redux --save
-```
-##### run in browser
-```
 npm start
-```
-##### Pop-up configuration file, custom configuration webpack
-```
+<!-- 弹出配置文件，自定义配置webpack -->
 npm run eject
 ```
 
+## 2-3 express+mongodb基础
 
-## 2-2: branch *learn* -> ES6
-_✨✨✨_
-_ES6_
+**_server/server.js_**
 
+> express + mongodb, develop web back-end interface
 
-## 2-3: express
-_✨✨✨_
-_server/server.js_
-##### express+mongodb,Develop the web background interface.
-```
+```node
 npm install express --save
-```
-##### Auto refresh background
-```
+<!-- auto refresh node -->
 npm install -g nodemon
-```
-##### run, into server/server.js path
-```
 nodemon server.js
 ```
- 
 
-## 2-4: mongodb
-_✨✨✨_
-_server/server.js_
-##### install mongodb
-```
+## 2-4 express+mongodb基础
+
+```node
 brew install mongodb
-```
-##### By manipulating mongodb through mongoose, json is stored.
-```
+<!-- 通过mongodb操作mongodb，存储json -->
 npm install mongoose --save
 ```
-##### run mongo
-##### 1. iTerm
-```
+
+> run mongo
+
+```node
 sudo mongod
-```
-##### 2. another iTerm tab
-```
+<!-- another iTerm tab -->
 mongo
-```
-##### 3. run, into server.js path
-```
+<!-- get in server.js path and run -->
 nodemon server.js
 ```
-##### 4. projectName path
-```
-npm start
-```
-##### mongodb: Add Delete Modify Check
 
+## 3-1 React基础知识回顾1-入门例子
 
-## 3-1: react basis
-_✨✨✨_
-_App-1.js_
-##### 1. install react
-```
+- **App-1.js**
+
+```node
 npm install --save react
-```
-##### 2. run react
-```
 npm start
 ```
 
+## 3-2 React基础知识回顾2-组件之间传递数据
 
-## 3-2: component transfer Data
-_✨✨✨_
-_App-1.js_
+## 3-3 React基础知识回顾3-组件内部 state
 
+## 3-4 React基础知识回顾4-事件
 
-## 3-3: state Management status
-_✨✨✨_
-_App-1.js_
+- this
 
+## 3-5 React基础知识回顾5-React生命周期
 
-## 3-4: Solve this scope problem.
-_✨✨✨_
-_App-1.js_
+## 3-6 React基础知识回顾6-安装 CHROME 扩展
 
+## 3-7 antd-mobile 组件使用
 
-## 3-5: life circle
-_✨✨✨_
-_App-1.js_
+> install antd-mobile latest
 
-
-## 3-6: chrome browser tool -> React 
-_✨_
-
-
-## 3-7: antd-mobile UI
-_✨✨✨_
-_App-1.js_
-##### install antd-mobile latest
-```
+```node
 npm install antd-mobile@next --save
 npm install antd-mobile --save
-```
-##### Load components and styles as needed.
-```
+<!-- Load components and styles as needed. -->
 npm install babel-plugin-import --save
 ```
-##### package.json, config like this, auto import antd-mobile 
-```
+
+> **package.json**, config auto import antd-mobile
+
+```json
 "babel": {
-    "presets": [
-      "react-app"
-    ],
-    "plugins": [
-      [
-        "import",
-        {
-          "libraryName": "antd-mobile",
-          "style": "css"
-        }
-      ]
+  "presets": [
+    "react-app"
+  ],
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "antd-mobile",
+        "style": "css"
+      }
     ]
-  },
+  ]
+},
 ```
 
+## 4-1 Redux状态管理1-结合小例子看 Redux 是什么？
 
-## 4-1: Redux control data status
-_✨✨✨_
-_App-1.js_
-_index-2-redux-1.js_
-##### redux install
-```
+**_App-1.js_**
+**_index-2-redux-1.js_**
+
+```node
 npm install redux --save
 ```
-##### introduce:
-##### 1. safe box(store), record(state)
-##### 2. Commissioner(dispatch), doing(action)
-##### 3. practitioners(reducer), get state and action create new state
-##### Use:
-##### 1. through reducer create store, use store.getState get status
-##### 2. status change, store.dispatch(action) change status
-##### 3. reducer accept state and action return new state, use store.subscribe listen modify
 
+- 1 safe box(store), record(state)
+- 2 commit(dispatch), doing(action)
+- 3 handle(reducer), get state(store.getState) and action(store.dispatch) change status, return new state, listen(store.subscribe)
  
 ## 4-2, 4-3, 4-4, 4-5, 4-6, 4-7: Redux
 _✨✨✨✨_
@@ -267,22 +214,36 @@ _✨✨_
 _config_
 
 
-## 6-1: user Authentication, express need it
+--- 
+## branch: _login-page_
+## 6-1: cookie user verification
+_✨✨_
+##### express require cookie, install cookie
+```
 npm install cookie-parser --save
-## cookie like a creditcard, when login the server will return
-## carry a cookie can access some resource
+```
+##### cookie like a credit card, when login the server will return
+##### carry a cookie can access some resource
 
 
-## 6-2: page design
+## 6-2: page basic design
+_✨✨✨_
+_logo.js_
+_index.js_
+_login.js_
+_register.js_
 
 
-## 6-3: 
-## checked route
-## server/user.js
+## 6-3: auth route
+_✨✨✨_
+_authroute.js_
+_server.js_
+_user.js_
 
 
-## 6-4:
-## auth login
+## 6-4: auth login
+_✨✨✨_
+_authroute.js_
 
 
 ## 6-5: register component func
@@ -356,7 +317,7 @@ npm install prop-types --save
 
 
 ## 9-4: usercenter logout
-## chrome dev basic knowledge
+## chrome dev basic k nowledge
 npm install browser-cookies --save
 cookies.set()
 cookies.get()
