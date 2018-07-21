@@ -1,4 +1,4 @@
-const express = require('express')
+const express = require('../../../Library/Caches/typescript/2.9/node_modules/@types/express')
 const mongoose = require('mongoose')
 
 // 连接mongo, 使用imooc-chat集合

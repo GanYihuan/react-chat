@@ -19,7 +19,7 @@ npm run eject
 
 ## 2-3 express+mongodb基础
 
-**_server/server.js_**
+- **server/server.js**
 
 > express + mongodb, develop web back-end interface
 
@@ -101,49 +101,51 @@ npm install babel-plugin-import --save
 
 ## 4-1 Redux状态管理1-结合小例子看 Redux 是什么？
 
-**_App-1.js_**
-**_index-2-redux-1.js_**
+- **App-1.js**
+- **index-2-redux-1.js**
 
 ```node
 npm install redux --save
 ```
-
+ 
 - 1 safe box(store), record(state)
 - 2 commit(dispatch), doing(action)
 - 3 handle(reducer), get state(store.getState) and action(store.dispatch) change status, return new state, listen(store.subscribe)
- 
-## 4-2, 4-3, 4-4, 4-5, 4-6, 4-7: Redux
-_✨✨✨✨_
-_App-2_
-_index-3-redux-2_
-_redux-2_
-##### redux handle async
-```
+
+## 4-2 Redux状态管理2-Redux 如何和 React 一起用
+
+- **App-2**
+- **index-3-redux-2**
+- **redux**
+
+```node
+<!-- redux handle async -->
 npm install redux-thunk --save
 ```
-##### applyMiddleware star thunk middleware
-##### Action return function，dispatch submit action
-##### 4-5. open chrome devTools, Redux
-##### 4-6. connect react and redux
-```
+
+## 4-7 Redux状态管理7-使用 React-redux（Connect 可以用装饰器的方法来书写）
+
+- **App-2**
+- **index-3-redux-2**
+- **redux**
+
+```node
+<!-- redux handle async -->
+npm install redux-thunk --save
+npm install redux-devtools-extension --save
+<!-- async -->
 npm install react-redux --save
-```
-##### 4-7: @connect adorn mode
-##### config
-```
-npm run eject
-```
-##### 
-```
+<!-- 装饰器 -->
 npm install babel-plugin-transform-decorators-legacy --save-dev
 ```
-##### package.json 
-```
+
+> package.json, 装饰器配置
+
+```json
  "plugins": [
     "transform-decorators-legacy"
  ]
 ```
-
 
 ## 4-8, 4-9: Route4
 _✨✨✨✨_
