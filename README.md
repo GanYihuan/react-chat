@@ -147,20 +147,21 @@ npm install babel-plugin-transform-decorators-legacy --save-dev
  ]
 ```
 
-## 4-8, 4-9: Route4
-_✨✨✨✨_
-_index-4-router4-1_
-##### router4, router component.
-```
+## 4-8 react-router4 路由 01-初识 React-router4
+
+- **index-4-router4-1**
+
+```node
+<!-- router4 -->
 npm install react-router-dom --save
 ```
+
 ##### BrowserRouter: Package the whole application
 ##### Router: Routing corresponds to the rendered component, which can be nested.
 ##### Link: Jump is special
 ##### ul: Route The component parameter can be identified by a colon.
 ##### Redirect: Components to jump
 ##### Switch: Render only a subroute component.
-
 
 ## 4-10, 4-11, 4-12: Router4, login
 _✨✨✨✨_

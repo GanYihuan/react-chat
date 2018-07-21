@@ -1,31 +1,41 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-/* async */
+import ReactDom from 'react-dom'
+// async
 import thunk from 'redux-thunk'
-/*
-applyMiddleware open thunk middleware
-compose combine function
-*/
-import {
-	createStore,
-	applyMiddleware,
-	compose
-} from 'redux'
-/* pass store, connect react redux */
+// applyMiddleware: thunk
+// compose: combine function
+import { createStore, applyMiddleware, compose } from 'redux'
+// pass store
 import { Provider } from 'react-redux'
-import { counter } from './redux'
-import App from './App-2'
+// Router4
+import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
+// Merges all reducer and returns
+import reducers from './reducer'
+// import App from './App' // 4-8, 4-9
+import Auth from './Auth'
+import Dashboard from './Dashboard'
+import './config'
 
 const store = createStore(
-	counter,
+	reducers,
 	compose(
 		applyMiddleware(thunk),
 		window.devToolsExtension ? window.devToolsExtension() : f => f
 	)
 )
-ReactDOM.render(
+// console.log(store.getState())
+
+ReactDom.render(
 	<Provider store={store}>
-		<App />
+		<BrowserRouter>
+			<Switch>
+				{/* Only the first route to render a hit */}
+				<Route path="/login" component={Auth} />
+				<Route path="/dashboard" component={Dashboard} />
+				{/* Default Jump */}
+				<Redirect to="/dashboard" />
+			</Switch>
+		</BrowserRouter>
 	</Provider>,
 	document.getElementById('root')
 )

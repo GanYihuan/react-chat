@@ -7,14 +7,14 @@ class App extends React.Component {
 		return (
 			<div>
 				<h2>独立团，团长{boss}</h2>
-				<yiying boss="张大喵boss" />
-				<qibinglian boss="孙德胜boss" />
+				<Yiying boss="张大喵boss" />
+				<Qibinglian boss="孙德胜boss" />
 			</div>
 		)
 	}
 }
 
-class yiying extends React.Component {
+class Yiying extends React.Component {
 	// 初始状态
 	constructor(props) {
 		// 组件间传递数据
@@ -69,7 +69,7 @@ class yiying extends React.Component {
 		return (
 			<div>
 				{/* this.props.boss: 获得父类传入的属性 */}
-				<h2>yiying营长，{this.props.boss}</h2>
+				<h2>Yiying营长，{this.props.boss}</h2>
 				{/* 3 this作用域 */}
 				{/* <button onClick={() => this.addSoldier()}>新兵入伍</button> */}
 				<Button type={'primary'} onClick={this.addSoldier}>
@@ -85,8 +85,8 @@ class yiying extends React.Component {
 	}
 }
 
-function qibinglian(props) {
-	return <h2>qibinglian连长{props.boss},冲啊！</h2>
+function Qibinglian(props) {
+	return <h2>Qibinglian连长{props.boss},冲啊！</h2>
 }
 
 export default App
