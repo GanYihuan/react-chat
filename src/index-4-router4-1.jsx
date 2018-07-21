@@ -4,21 +4,11 @@ import ReactDom from 'react-dom'
 import thunk from 'redux-thunk'
 // applyMiddleware: thunk
 // compose: combine function
-import {
-	createStore,
-	applyMiddleware,
-	compose
-} from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
 // pass store, connect react and redux
 import { Provider } from 'react-redux'
 // Router4
-import {
-	BrowserRouter,
-	Route,
-	Redirect,
-	Switch,
-	Link
-} from 'react-router-dom'
+import { BrowserRouter, Route, Redirect, Switch, Link } from 'react-router-dom'
 // Merges all reducer and returns
 import reducers from './reducer'
 // component
@@ -42,9 +32,9 @@ function Qibinglian() {
 }
 
 class Test extends React.Component {
-	constructor(props) {
-		super(props)
-	}
+	// constructor(props) {
+	// 	super(props)
+	// }
 
 	render() {
 		// history: History, route jump.
