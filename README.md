@@ -165,7 +165,7 @@ npm install react-router-dom --save
 - **reducer**
 - **redux**
 - 端口不一致时，使用 proxy 配置转发
-- axios 拦截器，统一 loading 处理
+- axios 拦截器，统一 loading 处理 **config.jsx**
 - redux 里使用异步数据，渲染界面
 
 ```node
@@ -190,18 +190,7 @@ nodemon server.js
 npm run start
 ```
 
-## 5-3: Intercepting
-
-_✨✨_
-_config_
-
----
-
-## branch: _login-page_
-
 ## 6-1: cookie user verification
-
-_✨✨_
 
 ##### express require cookie, install cookie
 
