@@ -190,7 +190,7 @@ nodemon server.js
 npm run start
 ```
 
-## 6-1: cookie user verification
+## 6-1 登录注册-课程内容介绍
 
 ##### express require cookie, install cookie
 
