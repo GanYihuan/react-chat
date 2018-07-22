@@ -2,12 +2,14 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 import { login, getUserData } from './Auth.redux'
-// import axios from 'axios'
 
-// Two reducers each reducers has a state
-// Merging Reducers
+/*
+Auth.redux.jsx reducer
+redux.jsx reducer
+两个 reducer 都有 state, 合并 reducer, reducer.js
+*/
 @connect(
-	// reducer.js: auth
+	/* reducer.js: auth */
 	state => state.auth,
 	{ login, getUserData }
 )

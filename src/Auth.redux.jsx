@@ -9,6 +9,7 @@ const initState = {
 	age: 20
 }
 
+/* reducer 处理 */
 export function auth(state = initState, action) {
 	// console.log(state)
 	switch (action.type) {
@@ -23,9 +24,9 @@ export function auth(state = initState, action) {
 	}
 }
 
-// Async
+/* async */
 export function getUserData() {
-	// dispatch: Used to notify data modify
+	/* dispatch: Used to notify data modify */
 	return dispatch => {
 		axios.get('/data').then(res => {
 			if (res.status === 200) {
@@ -35,16 +36,18 @@ export function getUserData() {
 	}
 }
 
-// action creators
-// payload: Custom data
+/* action (store.dispatch) */
+/* payload: Custom data */
 export function userData(data) {
 	return { type: USER_DATA, payload: data }
 }
 
+/* action (store.dispatch) */
 export function login() {
 	return { type: LOGIN }
 }
 
+/* action (store.dispatch) */
 export function logout() {
 	return { type: LOGOUT }
 }

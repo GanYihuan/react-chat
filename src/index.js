@@ -11,7 +11,6 @@ import { Provider } from 'react-redux'
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
 // Merges all reducer and returns
 import reducers from './reducer'
-// import App from './App' // 4-8, 4-9
 import Auth from './Auth'
 import Dashboard from './Dashboard'
 import './config'

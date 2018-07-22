@@ -1,7 +1,7 @@
 const ADD_GUN = 'add machine gun.'
 const REMOVE_GUN = 'reduce machine guns'
 
-// reducer 处理
+/* reducer 处理 */
 export function counter(state = 10, action) {
 	// let state = state||0
 	switch (action.type) {
@@ -14,17 +14,17 @@ export function counter(state = 10, action) {
 	}
 }
 
-// action (store.dispatch)
+/* action (store.dispatch) */
 export function addGun() {
 	return { type: ADD_GUN }
 }
 
-// action(store.dispatch)
+/* action (store.dispatch) */
 export function removeGun() {
 	return { type: REMOVE_GUN }
 }
 
-// async
+/* async */
 export function addGunAsync() {
 	/* 验证插件的角色 */
 	return dispatch => {

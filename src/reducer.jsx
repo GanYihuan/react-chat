@@ -1,4 +1,4 @@
-// merge all reducers and return.
+/* merge all reducers & return */
 import { combineReducers } from 'redux'
 import { counter } from './redux'
 import { auth } from './Auth.redux'

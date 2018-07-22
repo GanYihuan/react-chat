@@ -13,17 +13,20 @@ function Qibinglian() {
 }
 
 @connect(
-	// auth: reducers.js
+	/* auth: reducer.js */
 	state => state.auth,
 	{ logout }
 )
 class Dashboard extends Component {
 	render() {
+    /* 路由信息 */
 		const match = this.props.match
 		// console.log(this.props.match)
-		// match: get the hit route
-		// match.url: real route
-		// match.path: youreself defined route
+		/*
+    match: 命中路由
+		match.url: 真正路由
+		match.path: 自定义路由
+    */
 		const redirectToLogin = <Redirect to="/login" />
 		const app = (
 			<div>
@@ -42,14 +45,13 @@ class Dashboard extends Component {
 						<Link to={`${match.url}/qibinglian`}>骑兵连</Link>
 					</li>
 				</ul>
-				{/* exact: Full match/jump to app */}
 				<Route path={`${match.url}/`} exact component={App} />
 				<Route path={`${match.url}/erying`} component={Erying} />
 				<Route path={`${match.url}/qibinglian`} component={Qibinglian} />
 			</div>
 		)
 
-		// isAuth: Auth.redux.js
+		/* isAuth: Auth.redux.js */
 		return this.props.isAuth ? app : redirectToLogin
 	}
 }

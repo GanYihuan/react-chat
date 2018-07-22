@@ -9,9 +9,9 @@ applyMiddleware 开启中间键
 import { createStore, applyMiddleware, compose } from 'redux'
 /* 传递 store, 连接react redux */
 import { Provider } from 'react-redux'
-// Router4
+/* Router4 */
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
-/* merges reducer & returns */
+/* 合并 reducer */
 import reducers from './reducer'
 import Auth from './Auth'
 import Dashboard from './Dashboard'

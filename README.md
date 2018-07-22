@@ -156,24 +156,14 @@ npm install babel-plugin-transform-decorators-legacy --save-dev
 npm install react-router-dom --save
 ```
 
-##### BrowserRouter: Package the whole application
-##### Router: Routing corresponds to the rendered component, which can be nested.
-##### Link: Jump is special
-##### ul: Route The component parameter can be identified by a colon.
-##### Redirect: Components to jump
-##### Switch: Render only a subroute component.
+## 4-10 react-router4 路由 03-和 Redux 配合-复杂 Redux 应用1
 
-## 4-10, 4-11, 4-12: Router4, login
-_✨✨✨✨_
-_Auth_
-_Auth.redux_
-_Dashboard_
-_index-5-router-2_
-_reducer_
-_redux_
-##### combineReducers
-##### match
-
+- **Auth**
+- **Auth.redux**
+- **Dashboard**
+- **index-5-router-2**
+- **reducer**
+- **redux**
 
 ## 5-1: 需求分析
 _✨_
