@@ -11,7 +11,10 @@ app.get('/', function (req, res) {
 
 // http://localhost:9093/data
 app.get('/data', function (req, res) {
-  res.json({name: 'imooc', type: 'IT'})
+  res.json({
+    name: 'imooc',
+    type: 'IT'
+  })
 })
 
 app.listen(9093, function () {

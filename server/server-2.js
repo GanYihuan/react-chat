@@ -11,8 +11,14 @@ mongoose.connection.on('connected', function () {
 
 // 定义文档模型
 const User = mongoose.model('user', new mongoose.Schema({
-  user: {type: String, require: true},
-  age: {type: String, require: true}
+  user: {
+    type: String,
+    require: true
+  },
+  age: {
+    type: String,
+    require: true
+  }
 }))
 
 // 增加数据
@@ -33,7 +39,13 @@ User.create({
 // })
 
 // 修改数据
-User.update({'name': 'xiaoming'}, {'$set': {age: 30}}, function (err, doc) {
+User.update({
+  'name': 'xiaoming'
+}, {
+  '$set': {
+    age: 30
+  }
+}, function (err, doc) {
   console.log(doc)
 })
 

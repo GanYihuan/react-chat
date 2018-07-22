@@ -2,6 +2,7 @@ import React from 'react'
 /* 从外部组件获取参数 */
 import { connect } from 'react-redux'
 import { addGun, removeGun, addGunAsync } from './redux'
+import { Button } from 'antd-mobile'
 
 /* adorn mode */
 @connect(
@@ -21,9 +22,9 @@ class App extends React.Component {
 		return (
 			<div>
 				<h2>There's machine gun: {this.props.num}</h2>
-				<button onClick={this.props.addGun}>申请武器</button>
-				<button onClick={this.props.removeGun}>上交武器</button>
-				<button onClick={this.props.addGunAsync}>延迟给</button>
+				<Button onClick={this.props.addGun}>申请武器</Button>
+				<Button onClick={this.props.removeGun}>上交武器</Button>
+				<Button onClick={this.props.addGunAsync}>延迟给</Button>
 			</div>
 		)
 	}

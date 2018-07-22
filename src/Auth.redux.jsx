@@ -26,7 +26,7 @@ export function auth(state = initState, action) {
 
 /* async */
 export function getUserData() {
-	/* dispatch: Used to notify data modify */
+	/* dispatch: 用于通知数据修改 */
 	return dispatch => {
 		axios.get('/data').then(res => {
 			if (res.status === 200) {
@@ -37,7 +37,7 @@ export function getUserData() {
 }
 
 /* action (store.dispatch) */
-/* payload: Custom data */
+/* payload: 用户数据 */
 export function userData(data) {
 	return { type: USER_DATA, payload: data }
 }
