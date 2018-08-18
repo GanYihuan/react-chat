@@ -7,7 +7,7 @@
 
 ## 2-1 介绍 React 开发环境
 
-```node
+```console
 npm install -g create-react-app
 create-react-app projectName
 npm install redux --save
@@ -19,10 +19,9 @@ npm run eject
 ## 2-3 express+mongodb 基础
 
 - **server/server-1.js**
+- express + mongodb, develop web back-end interface
 
-> express + mongodb, develop web back-end interface
-
-```node
+```console
 npm install express --save
 <!-- auto refresh node -->
 npm install -g nodemon
@@ -31,13 +30,13 @@ nodemon server.js
 
 ## 2-4 express+mongodb 基础
 
-```node
+```console
 brew install mongodb
 <!-- 通过mongodb操作mongodb，存储json -->
 npm install mongoose --save
 ```
 
-> run mongo
+- run mongo
 
 ```node
 sudo mongod
@@ -155,7 +154,7 @@ npm install babel-plugin-transform-decorators-legacy --save-dev
 npm install react-router-dom --save
 ```
 
-## 5-2 前后端联调1
+## 5-2 前后端联调 1
 
 - **Auth**
 - **Auth.redux**
