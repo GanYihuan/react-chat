@@ -69,16 +69,14 @@ npm start
 
 ## 3-7 antd-mobile 组件使用
 
-> install antd-mobile latest
-
 ```console
 npm install antd-mobile@next --save
 npm install antd-mobile --save
-<!-- Load components and styles as needed. -->
+<!-- load components and styles as needed -->
 npm install babel-plugin-import --save
 ```
 
-> **package.json**, config auto import antd-mobile
+- **package.json**, config, auto import antd-mobile
 
 ```json
 "babel": {
