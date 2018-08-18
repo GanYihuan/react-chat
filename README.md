@@ -2,9 +2,8 @@
 
 > Redux+Router+Node.js 全栈开发
 
-## http://localhost:3000/login
-
-## http://localhost:3000/register
+<http://localhost:3000/login>
+<http://localhost:3000/register>
 
 ## 2-1 介绍 React 开发环境
 
@@ -19,7 +18,7 @@ npm run eject
 
 ## 2-3 express+mongodb 基础
 
-- **server/server.js**
+- **server/server-1.js**
 
 > express + mongodb, develop web back-end interface
 
