@@ -1,17 +1,15 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-/* async */
+// async
 import thunk from 'redux-thunk'
-/*
-applyMiddleware 开启中间键
-组合功能
-*/
+// applyMiddleware: thunk
+// compose: combine function
 import { createStore, applyMiddleware, compose } from 'redux'
-/* 传递 store, 连接react redux */
+// pass store
 import { Provider } from 'react-redux'
-/* Router4 */
+// Router4
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
-/* 合并 reducer */
+// Merges all reducer and returns
 import reducers from './reducer'
 import Auth from './Auth'
 import Dashboard from './Dashboard'
@@ -30,10 +28,10 @@ ReactDom.render(
 	<Provider store={store}>
 		<BrowserRouter>
 			<Switch>
-				{/* Switch: 渲染单个 Route. */}
+				{/* Only the first route to render a hit */}
 				<Route path="/login" component={Auth} />
 				<Route path="/dashboard" component={Dashboard} />
-				{/* 默认跳转 */}
+				{/* Default Jump */}
 				<Redirect to="/dashboard" />
 			</Switch>
 		</BrowserRouter>

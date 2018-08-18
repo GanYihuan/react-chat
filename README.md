@@ -38,7 +38,7 @@ npm install mongoose --save
 
 - run mongo
 
-```node
+```console
 sudo mongod
 <!-- another iTerm tab -->
 mongo
@@ -50,8 +50,8 @@ nodemon server.js
 
 - **App-1.js**
 
-```node
-npm install --save react
+```console
+npm install react --save
 npm start
 ```
 
@@ -71,7 +71,7 @@ npm start
 
 > install antd-mobile latest
 
-```node
+```console
 npm install antd-mobile@next --save
 npm install antd-mobile --save
 <!-- Load components and styles as needed. -->
@@ -102,7 +102,7 @@ npm install babel-plugin-import --save
 - **App-1.js**
 - **index-2-redux-1.js**
 
-```node
+```console
 npm install redux --save
 ```
 
@@ -116,7 +116,7 @@ npm install redux --save
 - **index-3-redux-2**
 - **redux**
 
-```node
+```console
 <!-- redux handle async -->
 npm install redux-thunk --save
 ```
@@ -127,7 +127,7 @@ npm install redux-thunk --save
 - **index-3-redux-2**
 - **redux**
 
-```node
+```console
 <!-- redux handle async -->
 npm install redux-thunk --save
 npm install redux-devtools-extension --save
@@ -149,7 +149,7 @@ npm install babel-plugin-transform-decorators-legacy --save-dev
 
 - **index-4-router4-1**
 
-```node
+```console
 <!-- router4 -->
 npm install react-router-dom --save
 ```
@@ -166,7 +166,7 @@ npm install react-router-dom --save
 - axios 拦截器，统一 loading 处理 **config.jsx**
 - redux 里使用异步数据，渲染界面
 
-```node
+```console
 npm install axios --save
 ```
 
@@ -178,7 +178,7 @@ npm install axios --save
 
 > run server
 
-```node
+```console
 sudo mongod
 <!-- open aother iTerm tab -->
 mongo
