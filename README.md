@@ -160,12 +160,6 @@ nodemon server.js
 
 ## 5-2 前后端联调 1
 
-- **Auth**
-- **Auth.redux**
-- **Dashboard**
-- **index-5-router-2**
-- **reducer**
-- **redux**
 - 端口不一致时，使用 proxy 配置转发
 - axios 拦截器，统一 loading 处理 **config.jsx**
 - redux 里使用异步数据，渲染界面
@@ -174,13 +168,13 @@ nodemon server.js
 npm install axios --save
 ```
 
-> **package.json** 统一到指定的端口
+- **package.json** 统一到指定的端口
 
 ```json
 "proxy": "http://localhost:9093"
 ```
 
-> run server
+- run server
 
 ```console
 sudo mongod
