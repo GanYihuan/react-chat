@@ -132,7 +132,7 @@ npm install react-redux --save
 npm install babel-plugin-transform-decorators-legacy --save-dev
 ```
 
-> package.json, 装饰器配置
+- package.json, 装饰器配置
 
 ```json
  "plugins": [
@@ -148,6 +148,8 @@ npm install babel-plugin-transform-decorators-legacy --save-dev
 <!-- router4 -->
 npm install react-router-dom --save
 ```
+
+## 4-10 react-router4 路由 03-和 Redux 配合-复杂 Redux 应用1
 
 ## 5-2 前后端联调 1
 

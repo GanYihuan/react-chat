@@ -33,14 +33,10 @@ function Qibinglian() {
 }
 
 class Test extends React.Component {
-	// constructor(props) {
-	// 	super(props)
-	// }
-
 	render() {
 		/*
-    history: route jump.
-		location: current page information,
+    history: route jump
+		location: current page information
 		url: 地址后域名
 		path: 本地定义的地址
 		match: 参数使用
@@ -79,7 +75,7 @@ ReactDom.render(
 					<Route path="/qibinglian" component={Qibinglian} />
 					{/* 输入参数跳转 */}
 					<Route path="/:location" component={Test} />
-          {/* 默认跳转 */}
+					{/* 默认跳转 */}
 					<Redirect to="/:location" />
 				</Switch>
 			</div>
