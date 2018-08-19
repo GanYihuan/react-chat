@@ -19,8 +19,9 @@ function Qibinglian() {
 )
 class Dashboard extends Component {
 	render() {
-    /* 路由信息 */
-		const match = this.props.match
+		const { logout, isAuth, match } = this.props
+		/* 路由信息 */
+		// const match = this.props.match
 		// console.log(this.props.match)
 		/*
     match: 命中路由
@@ -31,9 +32,7 @@ class Dashboard extends Component {
 		const app = (
 			<div>
 				<h1>独立团</h1>
-				{this.props.isAuth ? (
-					<button onClick={this.props.logout}>注销</button>
-				) : null}
+				{isAuth ? <button onClick={logout}>注销</button> : null}
 				<ul>
 					<li>
 						<Link to={`${match.url}/`}>一营</Link>
@@ -51,8 +50,7 @@ class Dashboard extends Component {
 			</div>
 		)
 
-		/* isAuth: Auth.redux.js */
-		return this.props.isAuth ? app : redirectToLogin
+		return isAuth ? app : redirectToLogin
 	}
 }
 

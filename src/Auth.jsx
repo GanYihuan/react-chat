@@ -19,14 +19,18 @@ class Auth extends React.Component {
 	}
 
 	render() {
+		const { user, age, isAuth, login } = this.props
 		return (
 			<div>
-				<h2>
-					我的名字是{this.props.user},年龄{this.props.age}
+        {isAuth ? <Redirect to="/dashboard" /> : null}
+        <h2>
+					我的名字是
+					{user}
+					,年龄
+					{age}
 				</h2>
-				{this.props.isAuth ? <Redirect to="/dashboard" /> : null}
 				<h2>你没有权限，需要登录才能看</h2>
-				<button onClick={this.props.login}>登录</button>
+				<button onClick={login}>登录</button>
 			</div>
 		)
 	}

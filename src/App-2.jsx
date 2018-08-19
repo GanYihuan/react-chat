@@ -18,7 +18,7 @@ func put into props
 */
 // const actionCreators = { addGun, removeGun, addGunAsync }
 @connect(
-	state => ({ num: state }),
+	state => ({ num: state.counter }),
 	{ addGun, removeGun, addGunAsync }
 )
 class App extends Component {

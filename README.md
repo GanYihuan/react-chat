@@ -151,6 +151,13 @@ npm install react-router-dom --save
 
 ## 4-10 react-router4 路由 03-和 Redux 配合-复杂 Redux 应用1
 
+- **index-5-router4-2**
+- run server/server-1.js
+
+```console
+nodemon server.js
+```
+
 ## 5-2 前后端联调 1
 
 - **Auth**
