@@ -97,7 +97,6 @@ npm install babel-plugin-import --save
 
 ## 4-1 Redux 状态管理 1-结合小例子看 Redux 是什么？
 
-- **App-1.js**
 - **index-2-redux-1.js**
 
 ```console
@@ -110,7 +109,6 @@ npm install redux --save
 
 ## 4-2 Redux 状态管理 2-Redux 如何和 React 一起用
 
-- **App-2**
 - **index-3-redux-2**
 - **redux**
 
@@ -121,7 +119,6 @@ npm install redux-thunk --save
 
 ## 4-7 Redux 状态管理 7-使用 React-redux（Connect 可以用装饰器的方法来书写）
 
-- **App-2**
 - **index-3-redux-2**
 - **redux**
 
