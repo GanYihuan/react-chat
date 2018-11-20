@@ -23,12 +23,7 @@ class Auth extends React.Component {
 		return (
 			<div>
         {isAuth ? <Redirect to="/dashboard" /> : null}
-        <h2>
-					我的名字是
-					{user}
-					,年龄
-					{age}
-				</h2>
+        <h2>我的名字是 {user},年龄{age}</h2>
 				<h2>你没有权限，需要登录才能看</h2>
 				<button onClick={login}>登录</button>
 			</div>

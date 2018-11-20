@@ -24,6 +24,7 @@ export function auth(state = initState, action) {
 	}
 }
 
+/* action (store.dispatch) */
 /* async */
 export function getUserData() {
 	/* dispatch: 用于通知数据修改 */
@@ -35,18 +36,14 @@ export function getUserData() {
 		})
 	}
 }
-
-/* action (store.dispatch) */
-/* payload: 用户数据 */
+/* payload: 接收传递的参数 */
 export function userData(data) {
 	return { type: USER_DATA, payload: data }
 }
-
 /* action (store.dispatch) */
 export function login() {
 	return { type: LOGIN }
 }
-
 /* action (store.dispatch) */
 export function logout() {
 	return { type: LOGOUT }

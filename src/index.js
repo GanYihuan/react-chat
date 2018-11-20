@@ -1,29 +1,40 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-/* async */
+import ReactDom from 'react-dom'
+// async
 import thunk from 'redux-thunk'
-/* applyMiddleware 开启中间键 组合功能 */
-import {
-	createStore,
-	applyMiddleware,
-	compose
-} from 'redux'
-/* 传递 store, 连接react redux */
+// applyMiddleware: thunk
+// compose: combine function
+import { createStore, applyMiddleware, compose } from 'redux'
+// pass store
 import { Provider } from 'react-redux'
-import { counter } from './redux'
-import App from './App-2'
+// Router4
+import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
+// Merges all reducer and returns
+import reducers from './reducer'
+import Auth from './Auth'
+import Dashboard from './Dashboard'
+import './config'
 
 const store = createStore(
-	counter,
+	reducers,
 	compose(
 		applyMiddleware(thunk),
 		window.devToolsExtension ? window.devToolsExtension() : f => f
 	)
 )
-ReactDOM.render(
-  /* 传递 store, 连接react redux */
+// console.log(store.getState())
+
+ReactDom.render(
 	<Provider store={store}>
-		<App />
+		<BrowserRouter>
+			<Switch>
+				{/* Only the first route to render a hit */}
+				<Route path="/login" component={Auth} />
+				<Route path="/dashboard" component={Dashboard} />
+				{/* Default Jump */}
+				<Redirect to="/dashboard" />
+			</Switch>
+		</BrowserRouter>
 	</Provider>,
 	document.getElementById('root')
 )

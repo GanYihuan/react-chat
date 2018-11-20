@@ -145,7 +145,7 @@ npm install babel-plugin-transform-decorators-legacy --save-dev
 - **index-4-router4-1**
 
 ```console
-<!-- router4 -->
+<!-- React-router4 -->
 npm install react-router-dom --save
 ```
 
