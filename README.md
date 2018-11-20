@@ -52,7 +52,7 @@ nodemon server.js
 
 ```console
 npm install react --save
-npm start
+npm run start
 ```
 
 ## 3-2 React 基础知识回顾 2-组件之间传递数据
