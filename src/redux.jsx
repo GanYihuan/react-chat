@@ -13,6 +13,7 @@ export function removeGun() {
 }
 /* async */
 export function addGunAsync() {
+  // thunk 插件的作用，可以返回函数
 	return dispatch => {
 		setTimeout(() => {
 			/* 异步结束后，手动执行分派 */
@@ -22,6 +23,7 @@ export function addGunAsync() {
 }
 
 // reducer.js
+// generate new state based on old state and action
 export function counter(state = 10, action) {
 	// let state = state||0
 	switch (action.type) {
