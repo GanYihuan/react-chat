@@ -1,7 +1,7 @@
 import { createStore } from 'redux'
 
 // 1) reducer
-// generate new state based on old state and action
+// generate new state base on old state and action
 function counter(state = 0, action) {
   switch (action.type) {
     case 'add':
@@ -15,22 +15,17 @@ function counter(state = 0, action) {
 
 // 2) create store
 const store = createStore(counter)
-// get status
-const init = store.getState()
+const init = store.getState() // get status
 console.log(init)
 
 function listener() {
-  // get status
-  const current = store.getState()
-  // note that the symbol above the TAB key is
+  const current = store.getState() // get status
   console.log(`have ${current}`)
 }
-
 // 3) listening, subscribe
 store.subscribe(listener)
 
 // 4) distribute events, pass action
-// handling events
 store.dispatch({ type: 'add' })
 store.dispatch({ type: 'add' })
 store.dispatch({ type: 'decrease' })

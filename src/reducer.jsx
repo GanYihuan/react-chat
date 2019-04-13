@@ -1,5 +1,4 @@
-/* merge all reducers & return */
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux' // merge all reducers & return
 import { counter } from './redux'
 import { auth } from './Auth.redux'
 
