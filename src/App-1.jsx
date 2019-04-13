@@ -15,24 +15,19 @@ class App extends React.Component {
 }
 
 class Yiying extends React.Component {
-  // Initial state
-  constructor(props) {
-    // Passing data between components
-    super(props)
-    // Management status
-    this.state = {
+  constructor(props) { // init state
+    super(props) // pass data between components
+    this.state = { // manage status
       soldiers: ['A soldier', 'B soldier', 'C soldier']
     }
-    // 1: this Scope
-    this.addSoldier = this.addSoldier.bind(this)
+    this.addSoldier = this.addSoldier.bind(this) // 1: this Scope
     console.log('组件初始化')
   }
-
   render() {
     const { boss } = this.props
     return (
       <div>
-        {/* this.props.boss: Get the properties passed in by the parent class */}
+        {/* this.props.boss: Get properties that pass in by parent */}
         <h2>Yiying营长, {boss}</h2>
         {/* 3: this scope */}
         {/* <button onClick={() => this.addSoldier()}>新兵入伍</button> */}
@@ -40,9 +35,11 @@ class Yiying extends React.Component {
           新兵入伍
 				</Button>
         <List renderHeader={() => '士兵列表'}>
-          {this.state.soldiers.map(v => {
-            return <List.Item key={v}>{v}</List.Item>
-          })}
+          {
+            this.state.soldiers.map(v => {
+              return <List.Item key={v}>{v}</List.Item>
+            })
+          }
         </List>
       </div>
     )
@@ -53,8 +50,7 @@ class Yiying extends React.Component {
     console.log('组件马上就要挂载了')
   }
   // render()
-  // async request
-  componentDidMount() {
+  componentDidMount() { // async request
     console.log('组件已经挂载')
   }
 
@@ -79,9 +75,7 @@ class Yiying extends React.Component {
     console.log('组件卸载了')
   }
 
-  // 2: this scope
-  // addSoldier() => {
-  addSoldier() {
+  addSoldier() { // 2: this scope: addSoldier = () => {
     this.setState(() => {
       return {
         soldiers: [...this.state.soldiers, '新兵蛋子' + Math.random()]
