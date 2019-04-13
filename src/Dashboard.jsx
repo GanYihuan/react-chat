@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link, Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { logout } from './Auth.redux'
-import App from './App-2'
+import App from './App-3'
 
 function Erying() {
 	return <h2>二营</h2>
@@ -13,7 +13,7 @@ function Qibinglian() {
 }
 
 @connect(
-	// auth: reducer.js
+	// auth: reducer.js/Auth.redux.jsx
 	state => state.auth,
 	{ logout }
 )

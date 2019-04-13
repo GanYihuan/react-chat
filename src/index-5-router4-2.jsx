@@ -1,16 +1,19 @@
+/*
+ * @Description: nodemon server.js
+ * @version: 1.0
+ * @Author: GanEhank
+ * @LastEditors: GanEhank
+ * @Date: 2019-04-13 18:16:01
+ * @LastEditTime: 2019-04-14 05:55:35
+ */
+
 import React from 'react'
 import ReactDom from 'react-dom'
-// async
 import thunk from 'redux-thunk'
-// applyMiddleware: thunk
-// compose: combine function
 import { createStore, applyMiddleware, compose } from 'redux'
-// pass store
 import { Provider } from 'react-redux'
-// Router4
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
-// Merges all reducer and returns
-import reducers from './reducer'
+import reducers from './reducer' // Merges all reducer and returns
 import Auth from './Auth'
 import Dashboard from './Dashboard'
 import './config'
@@ -22,16 +25,13 @@ const store = createStore(
 		window.devToolsExtension ? window.devToolsExtension() : f => f
 	)
 )
-// console.log(store.getState())
 
 ReactDom.render(
 	<Provider store={store}>
 		<BrowserRouter>
 			<Switch>
-				{/* Only the first route to render a hit */}
 				<Route path="/login" component={Auth} />
 				<Route path="/dashboard" component={Dashboard} />
-				{/* Default Jump */}
 				<Redirect to="/dashboard" />
 			</Switch>
 		</BrowserRouter>

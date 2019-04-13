@@ -9,8 +9,7 @@ redux.jsx reducer
 both reducer have state, combine reducer, reducer.js
 */
 @connect(
-	// reducer.js: auth
-	state => state.auth,
+	state => state.auth, // reducer.js: auth
 	{ login, getUserData }
 )
 class Auth extends React.Component {
