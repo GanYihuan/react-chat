@@ -1,14 +1,14 @@
 const express = require('../../../Library/Caches/typescript/2.9/node_modules/@types/express')
 const mongoose = require('mongoose')
+const DB_URL = 'mongodb://localhost:27017/imooc' // connect mongo, (copy from iTerm mongo)
 
-// 连接 mongo, (copy from iTerm mongo)
-const DB_URL = 'mongodb://localhost:27017/imooc'
+// connect mongo
 mongoose.connect(DB_URL)
 mongoose.connection.on('connected', function () {
   console.log('mongo connect server')
 })
 
-// 定义文档模型
+// define document model
 const User = mongoose.model('user', new mongoose.Schema(
   {
     user: {
@@ -22,7 +22,7 @@ const User = mongoose.model('user', new mongoose.Schema(
   }
 ))
 
-// 增加数据
+// create data
 User.create(
   {
     name: 'xiaohua',
@@ -37,12 +37,17 @@ User.create(
   }
 )
 
-// 删除数据
-// User.remove({age: 18}, function (err, doc) {
-//   console.log(doc)
-// })
+// detele data
+User.remove(
+  {
+    age: 18
+  },
+  function (err, doc) {
+    console.log(doc)
+  }
+)
 
-// 修改数据
+// change data
 User.update(
   {
     'name': 'xiaoming'
@@ -58,20 +63,13 @@ User.update(
 )
 
 const app = express()
-// res.send() 返回文本
-// res.json() 返回 json
-// res.sendfile() 返回文件
-// [访问数据](http://localhost:9093)
-app.get('/', function (req, res) {
-  res.send('<h1>hello world</h1>')
-})
 app.get('/data', function (req, res) {
-  // 查询数据
+  // find data
   User.find({}, function (err, doc) {
     res.json(doc)
   })
 })
-// 监听端口
+
 app.listen(9093, function () {
   console.log('Node app start at port 9093')
 })

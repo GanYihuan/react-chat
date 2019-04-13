@@ -1,15 +1,15 @@
 const express = require('express')
 const app = express()
 
-// res.send() 返回文本
-// res.json() 返回json
-// res.sendfile() 返回文件
-// 使用模块
+// res.send() return txt
+// res.json() return json
+// res.sendfile() return file
+// app.use() use module
 app.get('/', function (req, res) {
   res.send('<h1>hello world</h1>')
 })
 
-// http://localhost:9093/data
+// [chrome](http://localhost:9093/data)
 app.get('/data', function (req, res) {
   res.json({
     name: 'imooc',
