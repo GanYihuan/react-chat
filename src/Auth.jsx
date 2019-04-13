@@ -6,10 +6,10 @@ import { login, getUserData } from './Auth.redux'
 /*
 Auth.redux.jsx reducer
 redux.jsx reducer
-两个 reducer 都有 state, 合并 reducer, reducer.js
+both reducer have state, combine reducer, reducer.js
 */
 @connect(
-	/* reducer.js: auth */
+	// reducer.js: auth
 	state => state.auth,
 	{ login, getUserData }
 )
@@ -17,7 +17,6 @@ class Auth extends React.Component {
 	componentDidMount() {
 		this.props.getUserData()
 	}
-
 	render() {
 		const { user, age, isAuth, login } = this.props
 		return (

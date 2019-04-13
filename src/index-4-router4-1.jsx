@@ -1,15 +1,10 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-/* async */
-import thunk from 'redux-thunk'
-/* applyMiddleware 开启中间键, 组合功能 */
-import { createStore, applyMiddleware, compose } from 'redux'
-/* 传递 store, 连接react redux */
-import { Provider } from 'react-redux'
-/* Router4 */
-import { BrowserRouter, Route, Redirect, Switch, Link } from 'react-router-dom'
-/* merges reducer & returns */
-import reducers from './reducer'
+import thunk from 'redux-thunk' // redux handle async
+import { createStore, applyMiddleware, compose } from 'redux' // applyMiddleware: open middle ware, compose: combine func
+import { Provider } from 'react-redux' // pass store, connect react & redux
+import { BrowserRouter, Route, Redirect, Switch, Link } from 'react-router-dom' // Router4
+import reducers from './reducer' // merges reducer & returns
 import App from './App-1'
 
 const store = createStore(
@@ -34,28 +29,30 @@ class Test extends React.Component {
 		/*
     history: route jump
 		location: current page information
-		url: 地址后域名
-		path: 本地定义的地址
-		match: 参数使用
+		url: address bihide domain name
+		path: Locally defined address
+		match: parameter use
     */
     console.log(this.props)
     /*
-    历史跳转
+    history jump
 		this.props.history.push('/')
-		参数 /:location
+		parameter /:location
     */
-    /* 获取路由参数 */
+    // get router parameter
     return <h2>get Parameters: {this.props.match.params.location}</h2>
   }
 }
 
 ReactDom.render(
-  /* 传递 store, 连接react redux */
+  /* pass store, connect react & redux */
   <Provider store={store}>
+    {/* wrap route */}
     <BrowserRouter>
       <div>
         <ul>
           <li>
+            {/* route jump */}
             <Link to="/">One</Link>
           </li>
           <li>
@@ -65,15 +62,15 @@ ReactDom.render(
             <Link to="/qibinglian">Three</Link>
           </li>
         </ul>
+        {/* Switch: Render single Route. */}
         <Switch>
-          {/* Switch: 渲染单个 Route. */}
-          {/* exact: 完全匹配路由，防止包含关系 */}
+          {/* exact: Fully match routes to prevent inclusion relationships */}
           <Route path="/" exact component={App} />
           <Route path="/erying" component={Erying} />
           <Route path="/qibinglian" component={Qibinglian} />
-          {/* 输入参数跳转 */}
+          {/* pass parameter route jump */}
           <Route path="/:location" component={Test} />
-          {/* 默认跳转 */}
+          {/* default route jump */}
           <Redirect to="/:location" />
         </Switch>
       </div>

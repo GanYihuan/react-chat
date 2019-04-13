@@ -13,20 +13,20 @@ function Qibinglian() {
 }
 
 @connect(
-	/* auth: reducer.js */
+	// auth: reducer.js
 	state => state.auth,
 	{ logout }
 )
 class Dashboard extends Component {
 	render() {
 		const { logout, isAuth, match } = this.props
-		/* 路由信息 */
+		// route info
 		// const match = this.props.match
 		// console.log(this.props.match)
 		/*
-    match: 命中路由
-		match.url: 真正路由
-		match.path: 自定义路由
+    match: match route
+		match.url: real route
+		match.path: define route
     */
 		const redirectToLogin = <Redirect to="/login" />
 		const app = (
@@ -49,7 +49,6 @@ class Dashboard extends Component {
 				<Route path={`${match.url}/qibinglian`} component={Qibinglian} />
 			</div>
 		)
-
 		return isAuth ? app : redirectToLogin
 	}
 }
