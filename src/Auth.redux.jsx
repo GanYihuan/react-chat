@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios'// Promise based HTTP client for the browser and node.js
 
 const LOGIN = 'LOGIN'
 const LOGOUT = 'LOGOUT'
