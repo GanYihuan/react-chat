@@ -26,11 +26,13 @@ export function auth(state = initState, action) {
 // action (store.dispatch)
 export function getUserData() { // async
 	return dispatch => {
-		axios.get('/data').then(res => {
-			if (res.status === 200) {
-				dispatch(userData(res.data))
-			}
-		})
+    axios
+      .get('/data')
+      .then(res => {
+        if (res.status === 200) {
+          dispatch(userData(res.data))
+        }
+      })
 	}
 }
 export function userData(data) {
