@@ -6,14 +6,14 @@ import {
   compose
 } from 'redux'
 import thunk from 'redux-thunk' // redux handle async
-import { Provider } from 'react-redux' // pass store, connect react & redux
-import { counter } from './redux' // redux handle async
+import { Provider } from 'react-redux' // connect react & redux
+import { counter } from './redux'
 import App from './App-2'
 
 const store = createStore(
   counter,
   compose( // compose: combine func
-    applyMiddleware(thunk), // applyMiddleware: open middle ware
+    applyMiddleware(thunk), // applyMiddleware: open thunk middle ware
     window.devToolsExtension ? window.devToolsExtension() : f => f // open chrome redux plugin
   )
 )

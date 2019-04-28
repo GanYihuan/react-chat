@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDom from 'react-dom'
 import thunk from 'redux-thunk' // redux handle async
 import { createStore, applyMiddleware, compose } from 'redux' // applyMiddleware: open middle ware, compose: combine func
-import { Provider } from 'react-redux' // pass store, connect react & redux
+import { Provider } from 'react-redux' // connect react & redux
 import { BrowserRouter, Route, Redirect, Switch, Link } from 'react-router-dom' // Router4
 import reducers from './reducer' // merges reducer & returns
 import App from './App-1'

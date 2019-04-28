@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button } from 'antd-mobile'
-import { connect } from 'react-redux' // Get parameters from external components, async
+import { connect } from 'react-redux' // connect react & redux
 import { addGun, removeGun, addGunAsync } from './redux'
 
 // adorn mode

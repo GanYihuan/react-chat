@@ -20,8 +20,7 @@ function Qibinglian() {
 class Dashboard extends Component {
 	render() {
 		const { logout, isAuth, match } = this.props
-		// route info
-		// const match = this.props.match
+		// const match = this.props.match // route info
 		// console.log(this.props.match)
 		/*
     match: match route

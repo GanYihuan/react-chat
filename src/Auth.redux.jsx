@@ -1,5 +1,6 @@
 import axios from 'axios'// Promise based HTTP client for the browser and node.js
 
+// constant
 const LOGIN = 'LOGIN'
 const LOGOUT = 'LOGOUT'
 const USER_DATA = 'USER_DATA'
@@ -24,7 +25,7 @@ export function auth(state = initState, action) {
 }
 
 // action (store.dispatch)
-export function getUserData() { // async
+export function getUserData() { // redux-thunk handleasync
 	return dispatch => {
     axios
       .get('/data')

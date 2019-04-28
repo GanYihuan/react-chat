@@ -9,7 +9,7 @@ export function removeGun() {
 	return { type: REMOVE_GUN }
 }
 export function addGunAsync() { // async
-	return dispatch => { // redux-thunk，return func
+	return dispatch => { // redux-thunk
 		setTimeout(() => {
 			dispatch(addGun())
 		}, 2000)
