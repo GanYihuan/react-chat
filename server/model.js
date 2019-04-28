@@ -1,8 +1,7 @@
 const mongoose = require('mongoose')
-// Link MONGO and use IMOOC this collection
-const DB_URL = 'mongodb://localhost:27017/imooc-chat'
-// connect mongo
-mongoose.connect(DB_URL)
+const DB_URL = 'mongodb://localhost:27017/react-chat' // copy from iTerm
+mongoose.connect(DB_URL) // connect mongo
+
 const models = {
   user: {
     'user': {

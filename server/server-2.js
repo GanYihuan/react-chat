@@ -1,6 +1,6 @@
-const express = require('../../../Library/Caches/typescript/2.9/node_modules/@types/express')
+const express = require('express')
 const mongoose = require('mongoose')
-const DB_URL = 'mongodb://localhost:27017/imooc' // connect mongo, (copy from iTerm mongo)
+const DB_URL = 'mongodb://localhost:27017/react-chat' // connect mongo, (copy from iTerm mongo)
 
 // connect mongo
 mongoose.connect(DB_URL)
@@ -38,29 +38,29 @@ User.create(
 )
 
 // detele data
-User.remove(
-  {
-    age: 18
-  },
-  function (err, doc) {
-    console.log(doc)
-  }
-)
+// User.remove(
+//   {
+//     age: 18
+//   },
+//   function (err, doc) {
+//     console.log(doc)
+//   }
+// )
 
 // change data
-User.update(
-  {
-    'name': 'xiaoming'
-  },
-  {
-    '$set': {
-      age: 30
-    }
-  },
-  function (err, doc) {
-    console.log(doc)
-  }
-)
+// User.update(
+//   {
+//     'name': 'xiaoming'
+//   },
+//   {
+//     '$set': {
+//       age: 30
+//     }
+//   },
+//   function (err, doc) {
+//     console.log(doc)
+//   }
+// )
 
 const app = express()
 app.get('/data', function (req, res) {
