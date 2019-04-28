@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Button, List } from 'antd-mobile'
 
-class App extends React.Component {
+class App extends Component {
   render() {
     let boss = '李云龙boss'
     return (
@@ -14,11 +14,15 @@ class App extends React.Component {
   }
 }
 
-class Yiying extends React.Component {
+class Yiying extends Component {
   constructor(props) { // init state
     super(props) // pass data between components
     this.state = { // manage status
-      soldiers: ['A soldier', 'B soldier', 'C soldier']
+      soldiers: [
+        'A soldier',
+        'B soldier',
+        'C soldier'
+      ]
     }
     this.addSoldier = this.addSoldier.bind(this) // 1: this Scope
     console.log('组件初始化')
@@ -27,9 +31,8 @@ class Yiying extends React.Component {
     const { boss } = this.props
     return (
       <div>
-        {/* this.props.boss: Get properties that pass in by parent */}
         <h2>Yiying营长, {boss}</h2>
-        {/* 3: this scope */}
+        {/* 2: this scope */}
         {/* <button onClick={() => this.addSoldier()}>新兵入伍</button> */}
         <Button type={'primary'} onClick={this.addSoldier}>
           新兵入伍
@@ -75,7 +78,7 @@ class Yiying extends React.Component {
     console.log('组件卸载了')
   }
 
-  addSoldier() { // 2: this scope: addSoldier = () => {
+  addSoldier() { // 3: this scope: addSoldier = () => {
     this.setState(() => {
       return {
         soldiers: [...this.state.soldiers, '新兵蛋子' + Math.random()]
