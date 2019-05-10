@@ -36,12 +36,15 @@ export function getUserData() { // redux-thunk handleasync
       })
 	}
 }
+
 export function userData(data) {
 	return { type: USER_DATA, payload: data } // payload: receive pass parameter
 }
+
 export function login() {
 	return { type: LOGIN }
 }
+
 export function logout() {
 	return { type: LOGOUT }
 }
