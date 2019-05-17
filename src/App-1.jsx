@@ -15,7 +15,7 @@ class App extends Component {
 }
 
 class Yiying extends Component {
-  constructor(props) { // init state
+  constructor(props) {
     super(props) // pass data between components
     this.state = { // manage status
       soldiers: [
@@ -34,9 +34,7 @@ class Yiying extends Component {
         <h2>Yiying营长, {boss}</h2>
         {/* 2: this scope */}
         {/* <button onClick={() => this.addSoldier()}>新兵入伍</button> */}
-        <Button type={'primary'} onClick={this.addSoldier}>
-          新兵入伍
-				</Button>
+        <Button type={'primary'} onClick={this.addSoldier}>新兵入伍</Button>
         <List renderHeader={() => '士兵列表'}>
           {
             this.state.soldiers.map(v => {
