@@ -9,13 +9,10 @@ redux.jsx reducer
 both reducer have state, combine reducer, reducer.js
 */
 @connect(
-	state => state.auth, // reducer.js: auth
+	state => state.auth, // reducer.js: auth -> Auth.redux.jsx
 	{ login, getUserData }
 )
 class Auth extends React.Component {
-	componentDidMount() {
-		this.props.getUserData()
-	}
 	render() {
 		const { user, age, isAuth, login } = this.props
 		return (
@@ -26,6 +23,9 @@ class Auth extends React.Component {
 				<button onClick={login}>登录</button>
 			</div>
 		)
+  }
+  componentDidMount() {
+		this.props.getUserData()
 	}
 }
 

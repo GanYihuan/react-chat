@@ -25,7 +25,8 @@ class Dashboard extends Component {
 		/*
     match: match route
 		match.url: real route
-		match.path: define route
+    match.path: define route
+    match.params.location: get route param
     */
 		const redirectToLogin = <Redirect to="/login" />
 		const app = (
