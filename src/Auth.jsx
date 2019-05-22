@@ -4,9 +4,8 @@ import { Redirect } from 'react-router-dom'
 import { login, getUserData } from './Auth.redux'
 
 /*
-Auth.redux.jsx reducer
-redux.jsx reducer
-both reducer have state, combine reducer, reducer.js
+Auth.redux.jsx reducer & redux.jsx reducer
+both reducer have state, reducer.js combine reducer
 */
 @connect(
 	state => state.auth, // reducer.js: auth -> Auth.redux.jsx
