@@ -25,7 +25,7 @@ class Yiying extends Component {
       ]
     }
     this.addSoldier = this.addSoldier.bind(this) // 1: this Scope
-    console.log('组件初始化')
+    console.log('constructor 组件初始化')
   }
   render() {
     const { boss } = this.props
@@ -48,32 +48,32 @@ class Yiying extends Component {
 
   // Mount (life circle)
   componentWillMount() {
-    console.log('组件马上就要挂载了')
+    console.log('componentWillMount 组件马上就要挂载了')
   }
   // render()
   componentDidMount() { // async request
-    console.log('组件已经挂载')
+    console.log('componentDidMount 组件已经挂载')
   }
 
   // Update (life circle)
   componentWillReceiveProps(nextProps) {
-    console.log('组件要接收福组件的值了')
+    console.log('componentWillReceiveProps 组件要接收福组件的值了')
   }
   shouldComponentUpdate() {
-    console.log('判断是不是要更新组件')
+    console.log('shouldComponentUpdate 判断是不是要更新组件')
     return true
   }
   componentWillUpdate() {
-    console.log('马上就要更新组件了')
+    console.log('componentWillUpdate 马上就要更新组件了')
   }
   // render()
   componentDidUpdate() {
-    console.log('组件更新完毕')
+    console.log('componentDidUpdate 件更新完毕')
   }
 
   // Unmount (life circle)
   componentWillUnmount() {
-    console.log('组件卸载了')
+    console.log('componentWillUnmount 组件卸载了')
   }
 
   addSoldier() { // 3: this scope: addSoldier = () => {

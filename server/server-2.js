@@ -2,9 +2,8 @@ const express = require('express')
 const mongoose = require('mongoose')
 const DB_URL = 'mongodb://localhost:27017/react-chat' // connect mongo, (copy from iTerm mongo)
 
-// connect mongo
-mongoose.connect(DB_URL)
-mongoose.connection.on('connected', function () {
+mongoose.connect(DB_URL) // connect mongo
+mongoose.connection.on('connected', function () { // connect success
   console.log('mongo connect server')
 })
 

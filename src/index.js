@@ -1,40 +1,31 @@
-/*
- * @Description: nodemon server.js
- * @version: 1.0
- * @Author: GanEhank
- * @LastEditors: GanEhank
- * @Date: 2019-04-13 18:16:01
- * @LastEditTime: 2019-05-17 12:45:05
- */
+import { createStore } from 'redux'
 
-import React from 'react'
-import ReactDom from 'react-dom'
-import thunk from 'redux-thunk'
-import { createStore, applyMiddleware, compose } from 'redux'
-import { Provider } from 'react-redux'
-import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
-import reducers from './reducer' // Merges all reducer and returns
-import Auth from './Auth'
-import Dashboard from './Dashboard'
-import './config' // loading...
+// 1) reducer
+// generate new state base on old state and action
+function counter(state = 0, action) {
+  switch (action.type) {
+    case 'add':
+      return state + 1
+    case 'decrease':
+      return state - 1
+    default:
+      return 10
+  }
+}
 
-const store = createStore(
-	reducers,
-	compose(
-		applyMiddleware(thunk),
-		window.devToolsExtension ? window.devToolsExtension() : f => f
-	)
-)
+// 2) create store
+const store = createStore(counter)
+const init = store.getState() // get status
+console.log(init)
 
-ReactDom.render(
-	<Provider store={store}>
-		<BrowserRouter>
-			<Switch>
-				<Route path="/login" component={Auth} />
-				<Route path="/dashboard" component={Dashboard} />
-				<Redirect to="/dashboard" />
-			</Switch>
-		</BrowserRouter>
-	</Provider>,
-	document.getElementById('root')
-)
+function listener() {
+  const current = store.getState() // get status
+  console.log(`have ${current}`)
+}
+// 3) listening, subscribe
+store.subscribe(listener)
+
+// 4) distribute events, pass action
+store.dispatch({ type: 'add' })
+store.dispatch({ type: 'add' })
+store.dispatch({ type: 'decrease' })
