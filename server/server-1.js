@@ -1,10 +1,12 @@
 const express = require('express')
 const app = express()
 
-// res.send() return txt
-// res.json() return json
-// res.sendfile() return file
-// app.use() use module
+// res.send() -> return txt
+// res.json() -> return json
+// res.sendfile() -> return file
+// app.use() -> use module
+// app.post() -> send post interface
+// app.get() -> send get interface
 app.get('/', function (req, res) {
   res.send('<h1>hello world</h1>')
 })
