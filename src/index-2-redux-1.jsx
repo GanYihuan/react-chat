@@ -3,7 +3,7 @@ import { createStore } from 'redux'
 // 1) reducer
 // generate new state base on old state and action
 function counter(state = 0, action) {
-  switch (action.type) {
+  switch(action.type) {
     case 'add':
       return state + 1
     case 'decrease':
